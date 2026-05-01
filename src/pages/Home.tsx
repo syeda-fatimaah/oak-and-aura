@@ -9,10 +9,12 @@ import QuickView from '../components/QuickView';
 import type { Product } from '../types';
 import './Home.css';
 
+const BASE = import.meta.env.BASE_URL;
+
 const HERO_IMAGES = [
-  '/images/hero1.jpg',
-  '/images/hero2.jpg',
-  '/images/hero3.jpg',
+  `${BASE}images/hero1.jpg`,
+  `${BASE}images/hero2.jpg`,
+  `${BASE}images/hero3.jpg`,
 ];
 
 const TESTIMONIALS = [
@@ -23,12 +25,12 @@ const TESTIMONIALS = [
 ];
 
 const CATEGORY_IMAGES: Record<string, string> = {
-  sofas:   '/images/cat-sofas.jpg',
-  beds:    '/images/cat-beds.jpg',
-  dining:  '/images/cat-dining.jpg',
-  office:  '/images/cat-office.jpg',
-  storage: '/images/cat-storage.jpg',
-  decor:   '/images/cat-decor.jpg',
+  sofas:   `${BASE}images/cat-sofas.jpg`,
+  beds:    `${BASE}images/cat-beds.jpg`,
+  dining:  `${BASE}images/cat-dining.jpg`,
+  office:  `${BASE}images/cat-office.jpg`,
+  storage: `${BASE}images/cat-storage.jpg`,
+  decor:   `${BASE}images/cat-decor.jpg`,
 };
 
 const fadeUp: Variants = {
@@ -226,7 +228,7 @@ export default function Home() {
       {/* ===== LIFESTYLE BANNER ===== */}
       <section className="lifestyle-banner">
         <div className="lifestyle-banner__img">
-          <img src="/images/lifestyle.jpg" alt="Luxury living room interior" loading="lazy" />
+          <img src={`${import.meta.env.BASE_URL}images/lifestyle.jpg`} alt="Luxury living room interior" loading="lazy" />
           <div className="lifestyle-banner__overlay" />
         </div>
         <motion.div
@@ -403,7 +405,7 @@ function NewsletterSection() {
   return (
     <section className="newsletter-section">
       <div className="newsletter-section__bg">
-        <img src="/images/newsletter.jpg" alt="" aria-hidden="true" />
+        <img src={`${import.meta.env.BASE_URL}images/newsletter.jpg`} alt="" aria-hidden="true" />
         <div className="newsletter-section__overlay" />
       </div>
       <motion.div
@@ -440,3 +442,6 @@ function NewsletterSection() {
     </section>
   );
 }
+
+
+

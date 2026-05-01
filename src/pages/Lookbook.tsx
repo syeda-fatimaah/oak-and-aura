@@ -4,16 +4,18 @@ import { ArrowRight, X } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
 import './Lookbook.css';
 
+const BASE = import.meta.env.BASE_URL;
+
 const LOOKBOOK_ITEMS = [
-  { id: 1, title: 'Nordic Living Room', category: 'Living Room', image: '/images/look1.jpg', products: ['Nordic Oak Sofa', 'Travertine Coffee Table', 'Arched Floor Lamp'], slug: 'sofas' },
-  { id: 2, title: 'Serene Bedroom Retreat', category: 'Bedroom', image: '/images/look2.jpg', products: ['Aria Platform Bed', 'Geometric Mirror', 'Linen Throw Blanket'], slug: 'beds' },
-  { id: 3, title: 'Dining in Style', category: 'Dining Room', image: '/images/look3.jpg', products: ['Harvest Dining Table', 'Nordic Dining Chair Set', 'Rattan Pendant Light'], slug: 'dining' },
-  { id: 4, title: 'The Modern Office', category: 'Home Office', image: '/images/look4.jpg', products: ['Executive Oak Desk', 'Ergonomic Task Chair', 'Floating Wall Shelf System'], slug: 'office' },
-  { id: 5, title: 'Bohemian Corner', category: 'Decor', image: '/images/look5.jpg', products: ['Rattan Storage Cabinet', 'Ceramic Vase Collection', 'Woven Wall Tapestry'], slug: 'decor' },
-  { id: 6, title: 'Minimal Luxury', category: 'Living Room', image: '/images/look6.jpg', products: ['Curved Bouclé Sofa', 'Wool Area Rug', 'Scented Candle Set'], slug: 'sofas' },
-  { id: 7, title: 'Velvet Dreams', category: 'Bedroom', image: '/images/look7.jpg', products: ['Cloud Upholstered Bed', 'Japandi Sideboard', 'Arched Floor Lamp'], slug: 'beds' },
-  { id: 8, title: 'Marble & Brass', category: 'Dining Room', image: '/images/look8.jpg', products: ['Marble Top Dining Table', 'Velvet Dining Chair', 'Geometric Mirror'], slug: 'dining' },
-  { id: 9, title: 'Canopy Sanctuary', category: 'Bedroom', image: '/images/look9.jpg', products: ['Oak Canopy Bed Frame', 'Modular Bookcase System', 'Rattan Pendant Light'], slug: 'beds' },
+  { id: 1, title: 'Nordic Living Room', category: 'Living Room', image: `${BASE}images/look1.jpg`, products: ['Nordic Oak Sofa', 'Travertine Coffee Table', 'Arched Floor Lamp'], slug: 'sofas' },
+  { id: 2, title: 'Serene Bedroom Retreat', category: 'Bedroom', image: `${BASE}images/look2.jpg`, products: ['Aria Platform Bed', 'Geometric Mirror', 'Linen Throw Blanket'], slug: 'beds' },
+  { id: 3, title: 'Dining in Style', category: 'Dining Room', image: `${BASE}images/look3.jpg`, products: ['Harvest Dining Table', 'Nordic Dining Chair Set', 'Rattan Pendant Light'], slug: 'dining' },
+  { id: 4, title: 'The Modern Office', category: 'Home Office', image: `${BASE}images/look4.jpg`, products: ['Executive Oak Desk', 'Ergonomic Task Chair', 'Floating Wall Shelf System'], slug: 'office' },
+  { id: 5, title: 'Bohemian Corner', category: 'Decor', image: `${BASE}images/look5.jpg`, products: ['Rattan Storage Cabinet', 'Ceramic Vase Collection', 'Woven Wall Tapestry'], slug: 'decor' },
+  { id: 6, title: 'Minimal Luxury', category: 'Living Room', image: `${BASE}images/look6.jpg`, products: ['Curved Bouclé Sofa', 'Wool Area Rug', 'Scented Candle Set'], slug: 'sofas' },
+  { id: 7, title: 'Velvet Dreams', category: 'Bedroom', image: `${BASE}images/look7.jpg`, products: ['Cloud Upholstered Bed', 'Japandi Sideboard', 'Arched Floor Lamp'], slug: 'beds' },
+  { id: 8, title: 'Marble & Brass', category: 'Dining Room', image: `${BASE}images/look8.jpg`, products: ['Marble Top Dining Table', 'Velvet Dining Chair', 'Geometric Mirror'], slug: 'dining' },
+  { id: 9, title: 'Canopy Sanctuary', category: 'Bedroom', image: `${BASE}images/look9.jpg`, products: ['Oak Canopy Bed Frame', 'Modular Bookcase System', 'Rattan Pendant Light'], slug: 'beds' },
 ];
 
 export default function Lookbook() {
@@ -38,7 +40,7 @@ export default function Lookbook() {
     <div className="lookbook-page">
       {/* Hero */}
       <div className="lookbook-hero">
-        <img src="/images/lookbook-hero.jpg" alt="Lookbook hero" />
+        <img src={`${import.meta.env.BASE_URL}images/lookbook-hero.jpg`} alt="Lookbook hero" />
         <div className="lookbook-hero__overlay" />
         <motion.div
           className="lookbook-hero__content container"
@@ -141,3 +143,5 @@ export default function Lookbook() {
     </div>
   );
 }
+
+
