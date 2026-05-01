@@ -4,12 +4,12 @@ import { motion } from 'framer-motion';
 import './Collections.css';
 
 const COLLECTIONS = [
-  { id: 1, name: 'The Japandi Edit', subtitle: 'Japanese-Scandinavian Fusion', desc: 'Where Eastern minimalism meets Nordic warmth. Clean lines, natural materials, and a palette of muted earth tones.', image: 'https://picsum.photos/seed/col1/1200/800', tag: 'New Collection', color: '#D4C5A9', slug: 'sofas' },
-  { id: 2, name: 'Luxe Bedroom', subtitle: 'Hotel-Inspired Sanctuary', desc: 'Transform your bedroom into a five-star retreat with our curated selection of beds, nightstands, and soft furnishings.', image: 'https://picsum.photos/seed/col2/1200/800', tag: 'Bestseller', color: '#C8A96A', slug: 'beds' },
-  { id: 3, name: 'The Dining Room', subtitle: 'Gather & Celebrate', desc: 'Create the perfect setting for memorable meals. From intimate dinners to grand celebrations, we have the table for every occasion.', image: 'https://picsum.photos/seed/col3/1200/800', tag: 'Featured', color: '#92400E', slug: 'dining' },
-  { id: 4, name: 'Work From Home', subtitle: 'Productive & Beautiful', desc: 'Your home office should inspire creativity and focus. Discover desks, chairs, and storage solutions designed for the modern professional.', image: 'https://picsum.photos/seed/col4/1200/800', tag: 'Trending', color: '#1F2937', slug: 'office' },
-  { id: 5, name: 'Natural Living', subtitle: 'Organic & Sustainable', desc: 'Bring the outdoors in with our collection of rattan, bamboo, and natural wood pieces that celebrate the beauty of organic materials.', image: 'https://picsum.photos/seed/col5/1200/800', tag: 'Eco-Friendly', color: '#065F46', slug: 'decor' },
-  { id: 6, name: 'Monochrome Luxe', subtitle: 'Black, White & Gold', desc: 'A sophisticated palette of black, white, and gold accents for those who appreciate the drama of contrast and the elegance of restraint.', image: 'https://picsum.photos/seed/col6/1200/800', tag: 'Limited Edition', color: '#111111', slug: 'sofas' },
+  { id: 1, name: 'The Japandi Edit', subtitle: 'Japanese-Scandinavian Fusion', desc: 'Where Eastern minimalism meets Nordic warmth. Clean lines, natural materials, and a palette of muted earth tones.', image: '/images/col1.jpg', tag: 'New Collection', color: '#D4C5A9', slug: 'sofas' },
+  { id: 2, name: 'Luxe Bedroom', subtitle: 'Hotel-Inspired Sanctuary', desc: 'Transform your bedroom into a five-star retreat with our curated selection of beds, nightstands, and soft furnishings.', image: '/images/col2.jpg', tag: 'Bestseller', color: '#C8A96A', slug: 'beds' },
+  { id: 3, name: 'The Dining Room', subtitle: 'Gather & Celebrate', desc: 'Create the perfect setting for memorable meals. From intimate dinners to grand celebrations, we have the table for every occasion.', image: '/images/col3.jpg', tag: 'Featured', color: '#92400E', slug: 'dining' },
+  { id: 4, name: 'Work From Home', subtitle: 'Productive & Beautiful', desc: 'Your home office should inspire creativity and focus. Discover desks, chairs, and storage solutions designed for the modern professional.', image: '/images/col4.jpg', tag: 'Trending', color: '#1F2937', slug: 'office' },
+  { id: 5, name: 'Natural Living', subtitle: 'Organic & Sustainable', desc: 'Bring the outdoors in with our collection of rattan, bamboo, and natural wood pieces that celebrate the beauty of organic materials.', image: '/images/col5.jpg', tag: 'Eco-Friendly', color: '#065F46', slug: 'decor' },
+  { id: 6, name: 'Monochrome Luxe', subtitle: 'Black, White & Gold', desc: 'A sophisticated palette of black, white, and gold accents for those who appreciate the drama of contrast and the elegance of restraint.', image: '/images/col6.jpg', tag: 'Limited Edition', color: '#111111', slug: 'sofas' },
 ];
 
 const fadeUp = {
@@ -23,7 +23,7 @@ export default function Collections() {
       {/* Hero */}
       <div className="collections-hero">
         <div className="collections-hero__bg">
-          <img src="https://picsum.photos/seed/collectionshero/1920/800" alt="" />
+          <img src="/images/col-hero.jpg" alt="" />
           <div className="collections-hero__overlay" />
         </div>
         <div className="collections-hero__content container">

@@ -10,9 +10,9 @@ import type { Product } from '../types';
 import './Home.css';
 
 const HERO_IMAGES = [
-  'https://picsum.photos/seed/livingroom/1920/1080',
-  'https://picsum.photos/seed/bedroom22/1920/1080',
-  'https://picsum.photos/seed/interior5/1920/1080',
+  '/images/hero1.jpg',
+  '/images/hero2.jpg',
+  '/images/hero3.jpg',
 ];
 
 const TESTIMONIALS = [
@@ -23,12 +23,12 @@ const TESTIMONIALS = [
 ];
 
 const CATEGORY_IMAGES: Record<string, string> = {
-  sofas:   'https://picsum.photos/seed/sofa99/600/450',
-  beds:    'https://picsum.photos/seed/bedroom99/600/450',
-  dining:  'https://picsum.photos/seed/dining99/600/450',
-  office:  'https://picsum.photos/seed/office99/600/450',
-  storage: 'https://picsum.photos/seed/storage99/600/450',
-  decor:   'https://picsum.photos/seed/decor99/600/450',
+  sofas:   '/images/cat-sofas.jpg',
+  beds:    '/images/cat-beds.jpg',
+  dining:  '/images/cat-dining.jpg',
+  office:  '/images/cat-office.jpg',
+  storage: '/images/cat-storage.jpg',
+  decor:   '/images/cat-decor.jpg',
 };
 
 const fadeUp: Variants = {
@@ -226,11 +226,7 @@ export default function Home() {
       {/* ===== LIFESTYLE BANNER ===== */}
       <section className="lifestyle-banner">
         <div className="lifestyle-banner__img">
-          <img
-            src="https://picsum.photos/seed/luxroom/1400/800"
-            alt="Luxury living room interior"
-            loading="lazy"
-          />
+          <img src="/images/lifestyle.jpg" alt="Luxury living room interior" loading="lazy" />
           <div className="lifestyle-banner__overlay" />
         </div>
         <motion.div
@@ -407,11 +403,7 @@ function NewsletterSection() {
   return (
     <section className="newsletter-section">
       <div className="newsletter-section__bg">
-        <img
-          src="https://picsum.photos/seed/cozyroom/1400/800"
-          alt=""
-          aria-hidden="true"
-        />
+        <img src="/images/newsletter.jpg" alt="" aria-hidden="true" />
         <div className="newsletter-section__overlay" />
       </div>
       <motion.div
