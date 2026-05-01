@@ -98,7 +98,7 @@ function NotFound() {
       <span className="not-found-page__icon">🪑</span>
       <h1 className="not-found-page__code">404</h1>
       <p className="not-found-page__msg">This page seems to have wandered off.</p>
-      <a href="/" className="btn-primary">Back to Home</a>
+      <a href="/#/" className="btn-primary">Back to Home</a>
     </div>
   );
 }
