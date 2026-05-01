@@ -1,4 +1,4 @@
-import { BrowserRouter, Routes, Route, useLocation } from 'react-router-dom';
+import { HashRouter, Routes, Route, useLocation } from 'react-router-dom';
 import { useEffect, useState } from 'react';
 import { AppProvider } from './context/AppContext';
 import Navbar from './components/Navbar';
@@ -105,10 +105,10 @@ function NotFound() {
 
 export default function App() {
   return (
-    <BrowserRouter>
+    <HashRouter>
       <AppProvider>
         <AppLayout />
       </AppProvider>
-    </BrowserRouter>
+    </HashRouter>
   );
 }
