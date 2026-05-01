@@ -10,9 +10,9 @@ import type { Product } from '../types';
 import './Home.css';
 
 const HERO_IMAGES = [
-  'https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?w=1920&auto=format',
-  'https://images.unsplash.com/photo-1555041469-a586c61ea9bc?w=1920&auto=format',
-  'https://images.unsplash.com/photo-1586023492125-27b2c045efd7?w=1920&auto=format',
+  'https://picsum.photos/seed/livingroom/1920/1080',
+  'https://picsum.photos/seed/bedroom22/1920/1080',
+  'https://picsum.photos/seed/interior5/1920/1080',
 ];
 
 const TESTIMONIALS = [
@@ -23,12 +23,12 @@ const TESTIMONIALS = [
 ];
 
 const CATEGORY_IMAGES: Record<string, string> = {
-  sofas:   'https://images.unsplash.com/photo-1555041469-a586c61ea9bc?w=600&auto=format',
-  beds:    'https://images.unsplash.com/photo-1588046130717-0eb0c9a3ba15?w=600&auto=format',
-  dining:  'https://images.unsplash.com/photo-1617806118233-18e1de247200?w=600&auto=format',
-  office:  'https://images.unsplash.com/photo-1593642632559-0c6d3fc62b89?w=600&auto=format',
-  storage: 'https://images.unsplash.com/photo-1595428774223-ef52624120d2?w=600&auto=format',
-  decor:   'https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?w=600&auto=format',
+  sofas:   'https://picsum.photos/seed/sofa99/600/450',
+  beds:    'https://picsum.photos/seed/bedroom99/600/450',
+  dining:  'https://picsum.photos/seed/dining99/600/450',
+  office:  'https://picsum.photos/seed/office99/600/450',
+  storage: 'https://picsum.photos/seed/storage99/600/450',
+  decor:   'https://picsum.photos/seed/decor99/600/450',
 };
 
 const fadeUp: Variants = {
@@ -172,7 +172,7 @@ export default function Home() {
                       alt={cat.name}
                       loading="lazy"
                       onError={e => {
-                        (e.target as HTMLImageElement).src = 'https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?w=600&auto=format';
+                        (e.target as HTMLImageElement).src = 'https://picsum.photos/seed/fallback/600/450';
                       }}
                     />
                     <div className="category-card__overlay" />
@@ -227,7 +227,7 @@ export default function Home() {
       <section className="lifestyle-banner">
         <div className="lifestyle-banner__img">
           <img
-            src="https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?w=1400&auto=format"
+            src="https://picsum.photos/seed/luxroom/1400/800"
             alt="Luxury living room interior"
             loading="lazy"
           />
@@ -408,7 +408,7 @@ function NewsletterSection() {
     <section className="newsletter-section">
       <div className="newsletter-section__bg">
         <img
-          src="https://images.unsplash.com/photo-1586023492125-27b2c045efd7?w=1400&auto=format"
+          src="https://picsum.photos/seed/cozyroom/1400/800"
           alt=""
           aria-hidden="true"
         />
