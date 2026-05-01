@@ -44,7 +44,7 @@ export default function Wishlist() {
                       src={product.images[0]}
                       alt={product.name}
                       onError={e => {
-                        (e.target as HTMLImageElement).src = 'https://picsum.photos/seed/img9/800/600';
+                        (e.target as HTMLImageElement).src = 'https://images.unsplash.com/photo-1555041469-a586c61ea9bc?w=600&q=80';
                       }}
                     />
                     {product.badge && (
@@ -90,5 +90,3 @@ export default function Wishlist() {
     </div>
   );
 }
-
-

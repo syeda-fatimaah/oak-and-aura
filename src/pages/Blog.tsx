@@ -32,9 +32,9 @@ export default function Blog() {
         >
           <div className="blog-featured__img">
             <img
-              src="https://picsum.photos/seed/img2/800/600"
+              src="https://images.unsplash.com/photo-1555041469-a586c61ea9bc?w=1200&q=85&auto=format&fit=crop"
               alt="Oak & Aura living room"
-              onError={e => { (e.target as HTMLImageElement).src = 'https://picsum.photos/seed/img2/800/600'; }}
+              onError={e => { (e.target as HTMLImageElement).src = 'https://images.unsplash.com/photo-1493663284031-b7e3aefcae8e?w=1200&q=80&auto=format&fit=crop'; }}
             />
             <span className="blog-tag">Brand Story</span>
           </div>
@@ -87,10 +87,10 @@ export default function Blog() {
 
               <div className="blog-img-break">
                 <img
-                  src="https://picsum.photos/seed/img2/800/600"
+                  src="https://images.unsplash.com/photo-1493663284031-b7e3aefcae8e?w=1200&q=80&auto=format&fit=crop"
                   alt="Modern furniture interior"
                   loading="lazy"
-                  onError={e => { (e.target as HTMLImageElement).src = 'https://picsum.photos/seed/img2/800/600'; }}
+                  onError={e => { (e.target as HTMLImageElement).src = 'https://images.unsplash.com/photo-1567538096630-e0c55bd6374c?w=1200&q=80&auto=format&fit=crop'; }}
                 />
               </div>
 
@@ -129,10 +129,10 @@ export default function Blog() {
 
               <div className="blog-img-break">
                 <img
-                  src="https://picsum.photos/seed/img2/800/600"
+                  src="https://images.unsplash.com/photo-1586023492125-27b2c045efd3?w=1200&q=80&auto=format&fit=crop"
                   alt="Elegant living space"
                   loading="lazy"
-                  onError={e => { (e.target as HTMLImageElement).src = 'https://picsum.photos/seed/img2/800/600'; }}
+                  onError={e => { (e.target as HTMLImageElement).src = 'https://images.unsplash.com/photo-1555041469-a586c61ea9bc?w=1200&q=80&auto=format&fit=crop'; }}
                 />
               </div>
 
@@ -197,5 +197,3 @@ export default function Blog() {
     </div>
   );
 }
-
-

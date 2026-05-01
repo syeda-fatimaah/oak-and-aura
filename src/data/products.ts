@@ -1,30 +1,59 @@
 import type { Product } from '../types';
 
-// Picsum Photos — works on all hosts with no hotlink restrictions
-// Each seed gives a consistent image. We use furniture-appropriate seeds.
-const p = (seed: number, w = 800, h = 600) =>
-  `https://picsum.photos/seed/${seed}/${w}/${h}`;
+// Auto image URL generator using Unsplash
+const img = (query: string, seed?: number) =>
+  `https://images.unsplash.com/photo-${seed || '1555041469-a586c61ea9bc'}?w=800&q=80&auto=format&fit=crop`;
 
-// Category-specific seed pools
-const SOFA_SEEDS   = [10, 20, 30, 40, 50, 60];
-const BED_SEEDS    = [11, 21, 31, 41, 51, 61];
-const DINING_SEEDS = [12, 22, 32, 42, 52, 62];
-const OFFICE_SEEDS = [13, 23, 33, 43, 53, 63];
-const DECOR_SEEDS  = [14, 24, 34, 44, 54, 64];
-const STORAGE_SEEDS= [15, 25, 35, 45, 55, 65];
+// Curated Unsplash photo IDs for furniture categories
+const SOFA_PHOTOS = [
+  '1555041469-a586c61ea9bc', '1493663284031-b7e3aefcae8e',
+  '1567538096630-e0c55bd6374c', '1586023492125-27b2c045efd3',
+  '1540518614846-7eded433c457', '1506439773649-6e0eb8cfb237',
+];
+const BED_PHOTOS = [
+  '1631049307264-da0ec9d70304', '1616594039964-ae9021a400a0',
+  '1588046130717-0eb0c9a3ba15', '1505693416388-ac5ce068fe85',
+  '1522771739844-6a9f6a868522', '1560448204-603b3fc33ddc',
+];
+const DINING_PHOTOS = [
+  '1555041469-a586c61ea9bc', '1449247709967-d4461a6a6103',
+  '1617806118233-18e1de247200', '1530018607912-eff2daa1bac4',
+  '1595526051245-4506e0005bd0', '1565538810643-b5bdb714032a',
+];
+const OFFICE_PHOTOS = [
+  '1593642632559-0c6d3fc62b89', '1524758631624-e2822e304c36',
+  '1497366216548-37526070297c', '1518455027359-f3f8164ba6bd',
+  '1593642634367-d91a135587b2', '1486312338219-ce68d2c6f44d',
+];
+const DECOR_PHOTOS = [
+  '1586023492125-27b2c045efd3', '1513519245088-0e12902e5a38',
+  '1555041469-a586c61ea9bc', '1484101403633-562f891dc89a',
+  '1507003211169-0a1dd7228f2d', '1493663284031-b7e3aefcae8e',
+];
+const STORAGE_PHOTOS = [
+  '1555041469-a586c61ea9bc', '1493663284031-b7e3aefcae8e',
+  '1558618666-fcd25c85cd64', '1555041469-a586c61ea9bc',
+  '1493663284031-b7e3aefcae8e', '1558618666-fcd25c85cd64',
+];
 
-const makeImages = (seeds: number[], count = 4) =>
-  seeds.slice(0, count).map(s => p(s));
+const makeImages = (photos: string[], count = 4) =>
+  photos.slice(0, count).map(id => `https://images.unsplash.com/photo-${id}?w=800&q=80&auto=format&fit=crop`);
 
-export const FALLBACK_IMAGE = p(10);
+// Fallback image
+export const FALLBACK_IMAGE = `https://images.unsplash.com/photo-1555041469-a586c61ea9bc?w=800&q=80&auto=format&fit=crop`;
 
 export const getCategoryImage = (categorySlug: string, index = 0): string => {
-  const map: Record<string, number[]> = {
-    sofas: SOFA_SEEDS, beds: BED_SEEDS, dining: DINING_SEEDS,
-    office: OFFICE_SEEDS, decor: DECOR_SEEDS, storage: STORAGE_SEEDS,
+  const map: Record<string, string[]> = {
+    sofas: SOFA_PHOTOS,
+    beds: BED_PHOTOS,
+    dining: DINING_PHOTOS,
+    office: OFFICE_PHOTOS,
+    decor: DECOR_PHOTOS,
+    storage: STORAGE_PHOTOS,
   };
-  const seeds = map[categorySlug] || SOFA_SEEDS;
-  return p(seeds[index % seeds.length]);
+  const photos = map[categorySlug] || SOFA_PHOTOS;
+  const id = photos[index % photos.length];
+  return `https://images.unsplash.com/photo-${id}?w=800&q=80&auto=format&fit=crop`;
 };
 
 export const products: Product[] = [
@@ -42,7 +71,7 @@ export const products: Product[] = [
     rating: 4.8,
     reviewCount: 124,
     badge: 'Bestseller',
-    images: makeImages(SOFA_SEEDS),
+    images: makeImages(SOFA_PHOTOS),
     tags: ['scandinavian', 'oak', 'linen', 'modern'],
     inStock: true,
     colors: ['#D4C5A9', '#8B7355', '#4A4A4A'],
@@ -59,7 +88,7 @@ export const products: Product[] = [
     rating: 4.9,
     reviewCount: 89,
     badge: 'New',
-    images: makeImages([...SOFA_SEEDS].reverse()),
+    images: makeImages([...SOFA_PHOTOS].reverse()),
     tags: ['velvet', 'sectional', 'modular', 'luxury'],
     inStock: true,
     colors: ['#6B7280', '#1F2937', '#7C3AED'],
@@ -77,7 +106,7 @@ export const products: Product[] = [
     rating: 4.7,
     reviewCount: 67,
     badge: 'Sale',
-    images: makeImages(SOFA_SEEDS.slice(2)),
+    images: makeImages(SOFA_PHOTOS.slice(2)),
     tags: ['mid-century', 'walnut', 'leather', 'accent'],
     inStock: true,
     colors: ['#92400E', '#1F2937', '#D4C5A9'],
@@ -93,7 +122,7 @@ export const products: Product[] = [
     dimensions: 'W 200cm × D 85cm × H 75cm',
     rating: 4.6,
     reviewCount: 45,
-    images: makeImages(SOFA_SEEDS.slice(1)),
+    images: makeImages(SOFA_PHOTOS.slice(1)),
     tags: ['minimal', 'beech', 'boucle', 'contemporary'],
     inStock: true,
     colors: ['#F5F5F4', '#D4C5A9', '#78716C'],
@@ -110,7 +139,7 @@ export const products: Product[] = [
     rating: 4.9,
     reviewCount: 38,
     badge: 'New',
-    images: makeImages(SOFA_SEEDS),
+    images: makeImages(SOFA_PHOTOS),
     tags: ['curved', 'boucle', 'italian', 'sculptural'],
     inStock: true,
     colors: ['#F5F5F4', '#E7E5E4', '#D6D3D1'],
@@ -130,7 +159,7 @@ export const products: Product[] = [
     rating: 4.8,
     reviewCount: 156,
     badge: 'Bestseller',
-    images: makeImages(BED_SEEDS),
+    images: makeImages(BED_PHOTOS),
     tags: ['platform', 'walnut', 'linen', 'minimal'],
     inStock: true,
     colors: ['#92400E', '#1C1917', '#D4C5A9'],
@@ -147,7 +176,7 @@ export const products: Product[] = [
     rating: 4.7,
     reviewCount: 92,
     badge: 'New',
-    images: makeImages(BED_SEEDS.slice(1)),
+    images: makeImages(BED_PHOTOS.slice(1)),
     tags: ['upholstered', 'velvet', 'tufted', 'luxury'],
     inStock: true,
     colors: ['#6B7280', '#1F2937', '#9CA3AF'],
@@ -164,7 +193,7 @@ export const products: Product[] = [
     rating: 4.9,
     reviewCount: 44,
     badge: 'Limited',
-    images: makeImages(BED_SEEDS.slice(2)),
+    images: makeImages(BED_PHOTOS.slice(2)),
     tags: ['canopy', 'oak', 'four-poster', 'statement'],
     inStock: true,
   },
@@ -179,7 +208,7 @@ export const products: Product[] = [
     dimensions: 'W 160cm × L 200cm × H 90cm',
     rating: 4.6,
     reviewCount: 78,
-    images: makeImages(BED_SEEDS),
+    images: makeImages(BED_PHOTOS),
     tags: ['storage', 'platform', 'oak-veneer', 'functional'],
     inStock: true,
   },
@@ -198,7 +227,7 @@ export const products: Product[] = [
     rating: 4.9,
     reviewCount: 67,
     badge: 'Sale',
-    images: makeImages(DINING_SEEDS),
+    images: makeImages(DINING_PHOTOS),
     tags: ['farmhouse', 'reclaimed', 'oak', 'dining'],
     inStock: true,
   },
@@ -214,7 +243,7 @@ export const products: Product[] = [
     rating: 4.8,
     reviewCount: 29,
     badge: 'New',
-    images: makeImages(DINING_SEEDS.slice(1)),
+    images: makeImages(DINING_PHOTOS.slice(1)),
     tags: ['marble', 'brass', 'italian', 'luxury'],
     inStock: true,
   },
@@ -231,7 +260,7 @@ export const products: Product[] = [
     rating: 4.7,
     reviewCount: 112,
     badge: 'Sale',
-    images: makeImages(DINING_SEEDS.slice(2)),
+    images: makeImages(DINING_PHOTOS.slice(2)),
     tags: ['scandinavian', 'beech', 'rush', 'set'],
     inStock: true,
     colors: ['#D4C5A9', '#92400E', '#1C1917'],
@@ -247,7 +276,7 @@ export const products: Product[] = [
     dimensions: 'Ø 120cm × H 76cm',
     rating: 4.6,
     reviewCount: 54,
-    images: makeImages(DINING_SEEDS),
+    images: makeImages(DINING_PHOTOS),
     tags: ['round', 'pedestal', 'walnut', 'classic'],
     inStock: true,
   },
@@ -262,7 +291,7 @@ export const products: Product[] = [
     dimensions: 'W 48cm × D 55cm × H 90cm',
     rating: 4.5,
     reviewCount: 88,
-    images: makeImages(DINING_SEEDS.slice(1)),
+    images: makeImages(DINING_PHOTOS.slice(1)),
     tags: ['velvet', 'gold', 'glamour', 'upholstered'],
     inStock: true,
     colors: ['#6B7280', '#1F2937', '#7C3AED', '#DC2626'],
@@ -282,7 +311,7 @@ export const products: Product[] = [
     rating: 4.8,
     reviewCount: 93,
     badge: 'Bestseller',
-    images: makeImages(OFFICE_SEEDS),
+    images: makeImages(OFFICE_PHOTOS),
     tags: ['executive', 'oak', 'cable-management', 'workspace'],
     inStock: true,
   },
@@ -298,7 +327,7 @@ export const products: Product[] = [
     rating: 4.7,
     reviewCount: 201,
     badge: 'New',
-    images: makeImages(OFFICE_SEEDS.slice(1)),
+    images: makeImages(OFFICE_PHOTOS.slice(1)),
     tags: ['ergonomic', 'mesh', 'adjustable', 'comfort'],
     inStock: true,
     colors: ['#1F2937', '#6B7280', '#F5F5F4'],
@@ -314,7 +343,7 @@ export const products: Product[] = [
     dimensions: 'Various configurations',
     rating: 4.6,
     reviewCount: 145,
-    images: makeImages(OFFICE_SEEDS.slice(2)),
+    images: makeImages(OFFICE_PHOTOS.slice(2)),
     tags: ['floating', 'modular', 'pine', 'storage'],
     inStock: true,
   },
@@ -330,7 +359,7 @@ export const products: Product[] = [
     rating: 4.5,
     reviewCount: 76,
     badge: 'New',
-    images: makeImages(OFFICE_SEEDS),
+    images: makeImages(OFFICE_PHOTOS),
     tags: ['standing', 'adjustable', 'bamboo', 'health'],
     inStock: true,
   },
@@ -349,7 +378,7 @@ export const products: Product[] = [
     rating: 4.8,
     reviewCount: 62,
     badge: 'Sale',
-    images: makeImages(STORAGE_SEEDS),
+    images: makeImages(STORAGE_PHOTOS),
     tags: ['japandi', 'sideboard', 'oak', 'storage'],
     inStock: true,
   },
@@ -364,7 +393,7 @@ export const products: Product[] = [
     dimensions: 'W 80cm × D 35cm × H 200cm (per unit)',
     rating: 4.7,
     reviewCount: 134,
-    images: makeImages(STORAGE_SEEDS.slice(1)),
+    images: makeImages(STORAGE_PHOTOS.slice(1)),
     tags: ['modular', 'bookcase', 'birch', 'expandable'],
     inStock: true,
   },
@@ -380,7 +409,7 @@ export const products: Product[] = [
     rating: 4.6,
     reviewCount: 48,
     badge: 'New',
-    images: makeImages(STORAGE_SEEDS.slice(2)),
+    images: makeImages(STORAGE_PHOTOS.slice(2)),
     tags: ['rattan', 'bohemian', 'mango-wood', 'natural'],
     inStock: true,
   },
@@ -398,7 +427,7 @@ export const products: Product[] = [
     rating: 4.8,
     reviewCount: 87,
     badge: 'Bestseller',
-    images: makeImages(DECOR_SEEDS),
+    images: makeImages(DECOR_PHOTOS),
     tags: ['lamp', 'marble', 'brass', 'ambient'],
     inStock: true,
   },
@@ -413,7 +442,7 @@ export const products: Product[] = [
     dimensions: 'H 15cm, 25cm, 35cm (set of 3)',
     rating: 4.7,
     reviewCount: 156,
-    images: makeImages(DECOR_SEEDS.slice(1)),
+    images: makeImages(DECOR_PHOTOS.slice(1)),
     tags: ['ceramic', 'handcrafted', 'vase', 'earth-tones'],
     inStock: true,
     colors: ['#D4C5A9', '#92400E', '#78716C'],
@@ -430,7 +459,7 @@ export const products: Product[] = [
     rating: 4.6,
     reviewCount: 43,
     badge: 'Limited',
-    images: makeImages(DECOR_SEEDS.slice(2)),
+    images: makeImages(DECOR_PHOTOS.slice(2)),
     tags: ['tapestry', 'handwoven', 'cotton', 'wall-art'],
     inStock: true,
   },
@@ -447,7 +476,7 @@ export const products: Product[] = [
     rating: 4.9,
     reviewCount: 31,
     badge: 'New',
-    images: makeImages(DECOR_SEEDS),
+    images: makeImages(DECOR_PHOTOS),
     tags: ['travertine', 'brass', 'coffee-table', 'sculptural'],
     inStock: true,
   },
@@ -462,7 +491,7 @@ export const products: Product[] = [
     dimensions: 'W 130cm × L 170cm',
     rating: 4.7,
     reviewCount: 203,
-    images: makeImages(DECOR_SEEDS.slice(1)),
+    images: makeImages(DECOR_PHOTOS.slice(1)),
     tags: ['linen', 'throw', 'soft', 'natural'],
     inStock: true,
     colors: ['#F5F5F4', '#D4C5A9', '#78716C', '#1C1917'],
@@ -478,7 +507,7 @@ export const products: Product[] = [
     dimensions: 'W 80cm × H 90cm',
     rating: 4.8,
     reviewCount: 72,
-    images: makeImages(DECOR_SEEDS.slice(2)),
+    images: makeImages(DECOR_PHOTOS.slice(2)),
     tags: ['mirror', 'geometric', 'brass', 'statement'],
     inStock: true,
   },
@@ -494,7 +523,7 @@ export const products: Product[] = [
     rating: 4.9,
     reviewCount: 318,
     badge: 'Bestseller',
-    images: makeImages(DECOR_SEEDS),
+    images: makeImages(DECOR_PHOTOS),
     tags: ['candle', 'soy-wax', 'fragrance', 'gift'],
     inStock: true,
   },
@@ -509,7 +538,7 @@ export const products: Product[] = [
     dimensions: 'Ø 45cm × H 35cm',
     rating: 4.7,
     reviewCount: 94,
-    images: makeImages(DECOR_SEEDS.slice(1)),
+    images: makeImages(DECOR_PHOTOS.slice(1)),
     tags: ['pendant', 'rattan', 'handwoven', 'lighting'],
     inStock: true,
   },
@@ -526,7 +555,7 @@ export const products: Product[] = [
     rating: 4.8,
     reviewCount: 127,
     badge: 'Sale',
-    images: makeImages(DECOR_SEEDS.slice(2)),
+    images: makeImages(DECOR_PHOTOS.slice(2)),
     tags: ['rug', 'wool', 'hand-tufted', 'geometric'],
     inStock: true,
     colors: ['#F5F5F4', '#D4C5A9', '#78716C'],
@@ -544,6 +573,4 @@ export const categories = [
 
 export const MATERIALS = ['Oak Wood', 'Walnut Wood', 'Beech Wood', 'Velvet', 'Linen', 'Leather', 'Marble', 'Rattan', 'Steel', 'Brass'];
 
-
-
-
+void img; // suppress unused warning

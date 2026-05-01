@@ -9,7 +9,7 @@ const COLLECTIONS = [
     name: 'The Japandi Edit',
     subtitle: 'Japanese-Scandinavian Fusion',
     desc: 'Where Eastern minimalism meets Nordic warmth. Clean lines, natural materials, and a palette of muted earth tones.',
-    image: 'https://placehold.co/1200x800/e8e4de/C8A96A?text=Oak+%26+Aura',
+    image: 'https://images.unsplash.com/photo-1555041469-a586c61ea9bc?w=1200&q=85&auto=format&fit=crop',
     tag: 'New Collection',
     color: '#D4C5A9',
     slug: 'sofas',
@@ -19,7 +19,7 @@ const COLLECTIONS = [
     name: 'Luxe Bedroom',
     subtitle: 'Hotel-Inspired Sanctuary',
     desc: 'Transform your bedroom into a five-star retreat with our curated selection of beds, nightstands, and soft furnishings.',
-    image: 'https://placehold.co/1200x800/e8e4de/C8A96A?text=Oak+%26+Aura',
+    image: 'https://images.unsplash.com/photo-1631049307264-da0ec9d70304?w=1200&q=85&auto=format&fit=crop',
     tag: 'Bestseller',
     color: '#C8A96A',
     slug: 'beds',
@@ -29,7 +29,7 @@ const COLLECTIONS = [
     name: 'The Dining Room',
     subtitle: 'Gather & Celebrate',
     desc: 'Create the perfect setting for memorable meals. From intimate dinners to grand celebrations, we have the table for every occasion.',
-    image: 'https://placehold.co/1200x800/e8e4de/C8A96A?text=Oak+%26+Aura',
+    image: 'https://images.unsplash.com/photo-1449247709967-d4461a6a6103?w=1200&q=85&auto=format&fit=crop',
     tag: 'Featured',
     color: '#92400E',
     slug: 'dining',
@@ -39,7 +39,7 @@ const COLLECTIONS = [
     name: 'Work From Home',
     subtitle: 'Productive & Beautiful',
     desc: 'Your home office should inspire creativity and focus. Discover desks, chairs, and storage solutions designed for the modern professional.',
-    image: 'https://placehold.co/1200x800/e8e4de/C8A96A?text=Oak+%26+Aura',
+    image: 'https://images.unsplash.com/photo-1593642632559-0c6d3fc62b89?w=1200&q=85&auto=format&fit=crop',
     tag: 'Trending',
     color: '#1F2937',
     slug: 'office',
@@ -49,7 +49,7 @@ const COLLECTIONS = [
     name: 'Natural Living',
     subtitle: 'Organic & Sustainable',
     desc: 'Bring the outdoors in with our collection of rattan, bamboo, and natural wood pieces that celebrate the beauty of organic materials.',
-    image: 'https://placehold.co/1200x800/e8e4de/C8A96A?text=Oak+%26+Aura',
+    image: 'https://images.unsplash.com/photo-1513519245088-0e12902e5a38?w=1200&q=85&auto=format&fit=crop',
     tag: 'Eco-Friendly',
     color: '#065F46',
     slug: 'decor',
@@ -59,7 +59,7 @@ const COLLECTIONS = [
     name: 'Monochrome Luxe',
     subtitle: 'Black, White & Gold',
     desc: 'A sophisticated palette of black, white, and gold accents for those who appreciate the drama of contrast and the elegance of restraint.',
-    image: 'https://placehold.co/1200x800/e8e4de/C8A96A?text=Oak+%26+Aura',
+    image: 'https://images.unsplash.com/photo-1586023492125-27b2c045efd3?w=1200&q=85&auto=format&fit=crop',
     tag: 'Limited Edition',
     color: '#111111',
     slug: 'sofas',
@@ -77,7 +77,7 @@ export default function Collections() {
       {/* Hero */}
       <div className="collections-hero">
         <div className="collections-hero__bg">
-          <img src="https://placehold.co/1200x800/e8e4de/C8A96A?text=Oak+%26+Aura" alt="" />
+          <img src="https://images.unsplash.com/photo-1484101403633-562f891dc89a?w=1920&q=85&auto=format&fit=crop" alt="" />
           <div className="collections-hero__overlay" />
         </div>
         <div className="collections-hero__content container">
@@ -106,7 +106,7 @@ export default function Collections() {
                 alt={col.name}
                 loading="lazy"
                 onError={e => {
-                  (e.target as HTMLImageElement).src = 'https://placehold.co/1200x800/e8e4de/C8A96A?text=Oak+%26+Aura';
+                  (e.target as HTMLImageElement).src = 'https://images.unsplash.com/photo-1555041469-a586c61ea9bc?w=800&q=80';
                 }}
               />
               <div className="collection-card__overlay" />
@@ -126,4 +126,3 @@ export default function Collections() {
     </div>
   );
 }
-

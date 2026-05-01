@@ -21,7 +21,7 @@ export default function About() {
       {/* Hero */}
       <div className="about-hero">
         <div className="about-hero__bg">
-          <img src="https://picsum.photos/seed/img1/800/600" alt="" />
+          <img src="https://images.unsplash.com/photo-1555041469-a586c61ea9bc?w=1920&q=85&auto=format&fit=crop" alt="" />
           <div className="about-hero__overlay" />
         </div>
         <motion.div
@@ -56,7 +56,7 @@ export default function About() {
           </motion.div>
           <motion.div className="about-story__img" variants={fadeUp}>
             <img
-              src="https://picsum.photos/seed/img1/800/600"
+              src="https://images.unsplash.com/photo-1493663284031-b7e3aefcae8e?w=800&q=85&auto=format&fit=crop"
               alt="Our workshop"
               loading="lazy"
             />
@@ -125,7 +125,7 @@ export default function About() {
       {/* CTA */}
       <section className="about-cta">
         <div className="about-cta__bg">
-          <img src="https://picsum.photos/seed/img1/800/600" alt="" />
+          <img src="https://images.unsplash.com/photo-1586023492125-27b2c045efd3?w=1920&q=80&auto=format&fit=crop" alt="" />
           <div className="about-cta__overlay" />
         </div>
         <motion.div
@@ -146,5 +146,3 @@ export default function About() {
     </div>
   );
 }
-
-
