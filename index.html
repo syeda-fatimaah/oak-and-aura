@@ -7,6 +7,12 @@
     <meta name="description" content="Oak & Aura Furnishings — Luxury Furniture Store. Minimal. Modern. Timeless." />
     <meta name="keywords" content="furniture, luxury, modern, sofa, bed, dining, office, decor" />
     <title>Oak & Aura Furnishings — Furniture That Defines Your Space</title>
+    <script>
+      // Redirect to hash route if no hash present
+      if (!window.location.hash) {
+        window.location.replace(window.location.href.replace(/\/?$/, '/') + '#/');
+      }
+    </script>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Inter:wght@300;400;500;600&family=Poppins:wght@400;500;600&display=swap" rel="stylesheet" />
