@@ -10,9 +10,9 @@ import type { Product } from '../types';
 import './Home.css';
 
 const HERO_IMAGES = [
-  'https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?w=1920&q=85&auto=format&fit=crop',
-  'https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?w=1920&q=85&auto=format&fit=crop',
-  'https://images.unsplash.com/photo-1600210492493-0946911123ea?w=1920&q=85&auto=format&fit=crop',
+  'https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?w=1920&auto=format',
+  'https://images.unsplash.com/photo-1555041469-a586c61ea9bc?w=1920&auto=format',
+  'https://images.unsplash.com/photo-1586023492125-27b2c045efd7?w=1920&auto=format',
 ];
 
 const TESTIMONIALS = [
@@ -23,12 +23,12 @@ const TESTIMONIALS = [
 ];
 
 const CATEGORY_IMAGES: Record<string, string> = {
-  sofas: 'https://images.unsplash.com/photo-1555041469-a586c61ea9bc?w=600&q=80&auto=format&fit=crop',
-  beds: 'https://images.unsplash.com/photo-1631049307264-da0ec9d70304?w=600&q=80&auto=format&fit=crop',
-  dining: 'https://images.unsplash.com/photo-1449247709967-d4461a6a6103?w=600&q=80&auto=format&fit=crop',
-  office: 'https://images.unsplash.com/photo-1593642632559-0c6d3fc62b89?w=600&q=80&auto=format&fit=crop',
-  storage: 'https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=600&q=80&auto=format&fit=crop',
-  decor: 'https://images.unsplash.com/photo-1513519245088-0e12902e5a38?w=600&q=80&auto=format&fit=crop',
+  sofas:   'https://images.unsplash.com/photo-1555041469-a586c61ea9bc?w=600&auto=format',
+  beds:    'https://images.unsplash.com/photo-1588046130717-0eb0c9a3ba15?w=600&auto=format',
+  dining:  'https://images.unsplash.com/photo-1617806118233-18e1de247200?w=600&auto=format',
+  office:  'https://images.unsplash.com/photo-1593642632559-0c6d3fc62b89?w=600&auto=format',
+  storage: 'https://images.unsplash.com/photo-1595428774223-ef52624120d2?w=600&auto=format',
+  decor:   'https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?w=600&auto=format',
 };
 
 const fadeUp: Variants = {
@@ -46,7 +46,6 @@ export default function Home() {
   const [testimonialIndex, setTestimonialIndex] = useState(0);
   const heroRef = useRef<HTMLDivElement>(null);
 
-  // Auto-advance hero
   useEffect(() => {
     const timer = setInterval(() => {
       setHeroIndex(i => (i + 1) % HERO_IMAGES.length);
@@ -54,7 +53,6 @@ export default function Home() {
     return () => clearInterval(timer);
   }, []);
 
-  // Parallax effect
   useEffect(() => {
     const onScroll = () => {
       if (heroRef.current) {
@@ -123,7 +121,6 @@ export default function Home() {
           </div>
         </div>
 
-        {/* Slide indicators */}
         <div className="hero__indicators">
           {HERO_IMAGES.map((_, i) => (
             <button
@@ -175,7 +172,7 @@ export default function Home() {
                       alt={cat.name}
                       loading="lazy"
                       onError={e => {
-                        (e.target as HTMLImageElement).src = 'https://images.unsplash.com/photo-1555041469-a586c61ea9bc?w=600&q=80';
+                        (e.target as HTMLImageElement).src = 'https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?w=600&auto=format';
                       }}
                     />
                     <div className="category-card__overlay" />
@@ -230,7 +227,7 @@ export default function Home() {
       <section className="lifestyle-banner">
         <div className="lifestyle-banner__img">
           <img
-            src="https://images.unsplash.com/photo-1586023492125-27b2c045efd3?w=1920&q=85&auto=format&fit=crop"
+            src="https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?w=1400&auto=format"
             alt="Luxury living room interior"
             loading="lazy"
           />
@@ -310,9 +307,9 @@ export default function Home() {
               { icon: <Package size={28} />, title: 'Premium Materials', desc: 'Sustainably sourced solid wood, premium fabrics, and quality metals that last a lifetime.' },
               { icon: <Star size={28} />, title: 'Modern Designs', desc: 'Curated by expert designers to bring timeless aesthetics to contemporary living.' },
               { icon: <Truck size={28} />, title: 'Pakistan-Wide Delivery', desc: 'Karachi, Lahore, Islamabad, Peshawar — we deliver to all major cities across Pakistan.' },
-              { icon: <RefreshCw size={28} />, title: 'Easy Returns', desc: '30-day hassle-free returns. If you\'re not in love with it, we\'ll make it right.' },
+              { icon: <RefreshCw size={28} />, title: 'Easy Returns', desc: "30-day hassle-free returns. If you're not in love with it, we'll make it right." },
               { icon: <Shield size={28} />, title: '2-Year Warranty', desc: 'Every piece comes with a comprehensive 2-year warranty for complete peace of mind.' },
-              { icon: <span style={{fontSize:'1.5rem'}}>🌱</span>, title: 'Sustainable', desc: 'Eco-friendly practices, sourcing se le kar packaging aur delivery tak.' },
+              { icon: <span style={{ fontSize: '1.5rem' }}>🌱</span>, title: 'Sustainable', desc: 'Eco-friendly practices from sourcing to packaging and delivery.' },
             ].map((item, i) => (
               <motion.div key={i} className="why-card" variants={fadeUp}>
                 <div className="why-card__icon">{item.icon}</div>
@@ -349,9 +346,7 @@ export default function Home() {
                   </div>
                   <p className="testimonial-card__text">"{t.text}"</p>
                   <div className="testimonial-card__author">
-                    <div className="testimonial-card__avatar">
-                      {t.name.charAt(0)}
-                    </div>
+                    <div className="testimonial-card__avatar">{t.name.charAt(0)}</div>
                     <div>
                       <strong>{t.name}</strong>
                       <span>{t.location}</span>
@@ -413,7 +408,7 @@ function NewsletterSection() {
     <section className="newsletter-section">
       <div className="newsletter-section__bg">
         <img
-          src="https://images.unsplash.com/photo-1484101403633-562f891dc89a?w=1920&q=80&auto=format&fit=crop"
+          src="https://images.unsplash.com/photo-1586023492125-27b2c045efd7?w=1400&auto=format"
           alt=""
           aria-hidden="true"
         />
