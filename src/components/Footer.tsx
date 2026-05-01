@@ -110,9 +110,9 @@ export default function Footer() {
       <div className="footer__bottom container">
         <p>© 2026 Oak & Aura Furnishings. All rights reserved.</p>
         <div className="footer__bottom-links">
-          <Link to="/privacy">Privacy Policy</Link>
-          <Link to="/terms">Terms of Service</Link>
-          <Link to="/cookies">Cookie Policy</Link>
+          <Link to="/contact">Privacy Policy</Link>
+          <Link to="/contact">Terms of Service</Link>
+          <Link to="/contact">Cookie Policy</Link>
         </div>
         <div className="footer__payment">
           <span title="JazzCash">💚</span><span title="EasyPaisa">🟠</span><span title="Bank Transfer">🏦</span><span title="Secure">🔒</span>

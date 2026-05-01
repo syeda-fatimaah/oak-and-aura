@@ -3,6 +3,7 @@ import { useSearchParams, Link } from 'react-router-dom';
 import { SlidersHorizontal, X, ChevronDown, Grid3X3, LayoutList } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { products, categories, MATERIALS } from '../data/products';
+import { toPKR } from '../utils/currency';
 import ProductCard from '../components/ProductCard';
 import ProductCardSkeleton from '../components/ProductCardSkeleton';
 import QuickView from '../components/QuickView';
@@ -174,8 +175,8 @@ export default function Shop() {
             </h4>
             <div className="filter-price">
               <div className="filter-price__labels">
-                <span>${filters.priceRange[0]}</span>
-                <span>${filters.priceRange[1] === PRICE_MAX ? `${PRICE_MAX}+` : filters.priceRange[1]}</span>
+                <span>Rs. {toPKR(filters.priceRange[0]).toLocaleString('en-PK')}</span>
+                <span>Rs. {filters.priceRange[1] === PRICE_MAX ? `${toPKR(PRICE_MAX).toLocaleString('en-PK')}+` : toPKR(filters.priceRange[1]).toLocaleString('en-PK')}</span>
               </div>
               <input
                 type="range"
