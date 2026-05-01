@@ -76,7 +76,7 @@ export default function Checkout() {
                   <img
                     src={item.product.images[0]}
                     alt={item.product.name}
-                    onError={e => { (e.target as HTMLImageElement).src = 'https://images.unsplash.com/photo-1555041469-a586c61ea9bc?w=200&q=80'; }}
+                    onError={e => { (e.target as HTMLImageElement).src = 'https://picsum.photos/seed/img8/800/600'; }}
                   />
                   <div className="checkout-success__summary-info">
                     <p>{item.product.name}</p>
@@ -355,7 +355,7 @@ export default function Checkout() {
                     <img
                       src={item.product.images[0]}
                       alt={item.product.name}
-                      onError={e => { (e.target as HTMLImageElement).src = 'https://images.unsplash.com/photo-1555041469-a586c61ea9bc?w=200&q=80'; }}
+                      onError={e => { (e.target as HTMLImageElement).src = 'https://picsum.photos/seed/img8/800/600'; }}
                     />
                     <span className="checkout-summary__item-qty">{item.quantity}</span>
                   </div>
@@ -381,3 +381,5 @@ export default function Checkout() {
     </div>
   );
 }
+
+

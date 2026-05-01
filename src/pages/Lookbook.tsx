@@ -5,15 +5,15 @@ import { motion, AnimatePresence } from 'framer-motion';
 import './Lookbook.css';
 
 const LOOKBOOK_ITEMS = [
-  { id: 1, title: 'Nordic Living Room', category: 'Living Room', image: 'https://images.unsplash.com/photo-1555041469-a586c61ea9bc?w=800&q=85&auto=format&fit=crop', products: ['Nordic Oak Sofa', 'Travertine Coffee Table', 'Arched Floor Lamp'], slug: 'sofas' },
-  { id: 2, title: 'Serene Bedroom Retreat', category: 'Bedroom', image: 'https://images.unsplash.com/photo-1631049307264-da0ec9d70304?w=800&q=85&auto=format&fit=crop', products: ['Aria Platform Bed', 'Geometric Mirror', 'Linen Throw Blanket'], slug: 'beds' },
-  { id: 3, title: 'Dining in Style', category: 'Dining Room', image: 'https://images.unsplash.com/photo-1449247709967-d4461a6a6103?w=800&q=85&auto=format&fit=crop', products: ['Harvest Dining Table', 'Nordic Dining Chair Set', 'Rattan Pendant Light'], slug: 'dining' },
-  { id: 4, title: 'The Modern Office', category: 'Home Office', image: 'https://images.unsplash.com/photo-1593642632559-0c6d3fc62b89?w=800&q=85&auto=format&fit=crop', products: ['Executive Oak Desk', 'Ergonomic Task Chair', 'Floating Wall Shelf System'], slug: 'office' },
-  { id: 5, title: 'Bohemian Corner', category: 'Decor', image: 'https://images.unsplash.com/photo-1513519245088-0e12902e5a38?w=800&q=85&auto=format&fit=crop', products: ['Rattan Storage Cabinet', 'Ceramic Vase Collection', 'Woven Wall Tapestry'], slug: 'decor' },
-  { id: 6, title: 'Minimal Luxury', category: 'Living Room', image: 'https://images.unsplash.com/photo-1586023492125-27b2c045efd3?w=800&q=85&auto=format&fit=crop', products: ['Curved Bouclé Sofa', 'Wool Area Rug', 'Scented Candle Set'], slug: 'sofas' },
-  { id: 7, title: 'Velvet Dreams', category: 'Bedroom', image: 'https://images.unsplash.com/photo-1616594039964-ae9021a400a0?w=800&q=85&auto=format&fit=crop', products: ['Cloud Upholstered Bed', 'Japandi Sideboard', 'Arched Floor Lamp'], slug: 'beds' },
-  { id: 8, title: 'Marble & Brass', category: 'Dining Room', image: 'https://images.unsplash.com/photo-1617806118233-18e1de247200?w=800&q=85&auto=format&fit=crop', products: ['Marble Top Dining Table', 'Velvet Dining Chair', 'Geometric Mirror'], slug: 'dining' },
-  { id: 9, title: 'Canopy Sanctuary', category: 'Bedroom', image: 'https://images.unsplash.com/photo-1588046130717-0eb0c9a3ba15?w=800&q=85&auto=format&fit=crop', products: ['Oak Canopy Bed Frame', 'Modular Bookcase System', 'Rattan Pendant Light'], slug: 'beds' },
+  { id: 1, title: 'Nordic Living Room', category: 'Living Room', image: 'https://picsum.photos/seed/living1/800/600', products: ['Nordic Oak Sofa', 'Travertine Coffee Table', 'Arched Floor Lamp'], slug: 'sofas' },
+  { id: 2, title: 'Serene Bedroom Retreat', category: 'Bedroom', image: 'https://picsum.photos/seed/bed1/800/600', products: ['Aria Platform Bed', 'Geometric Mirror', 'Linen Throw Blanket'], slug: 'beds' },
+  { id: 3, title: 'Dining in Style', category: 'Dining Room', image: 'https://picsum.photos/seed/dining1/800/600', products: ['Harvest Dining Table', 'Nordic Dining Chair Set', 'Rattan Pendant Light'], slug: 'dining' },
+  { id: 4, title: 'The Modern Office', category: 'Home Office', image: 'https://picsum.photos/seed/office1/800/600', products: ['Executive Oak Desk', 'Ergonomic Task Chair', 'Floating Wall Shelf System'], slug: 'office' },
+  { id: 5, title: 'Bohemian Corner', category: 'Decor', image: 'https://picsum.photos/seed/decor1/800/600', products: ['Rattan Storage Cabinet', 'Ceramic Vase Collection', 'Woven Wall Tapestry'], slug: 'decor' },
+  { id: 6, title: 'Minimal Luxury', category: 'Living Room', image: 'https://picsum.photos/seed/living2/800/600', products: ['Curved Bouclé Sofa', 'Wool Area Rug', 'Scented Candle Set'], slug: 'sofas' },
+  { id: 7, title: 'Velvet Dreams', category: 'Bedroom', image: 'https://picsum.photos/seed/bed2/800/600', products: ['Cloud Upholstered Bed', 'Japandi Sideboard', 'Arched Floor Lamp'], slug: 'beds' },
+  { id: 8, title: 'Marble & Brass', category: 'Dining Room', image: 'https://picsum.photos/seed/dining2/800/600', products: ['Marble Top Dining Table', 'Velvet Dining Chair', 'Geometric Mirror'], slug: 'dining' },
+  { id: 9, title: 'Canopy Sanctuary', category: 'Bedroom', image: 'https://picsum.photos/seed/bed3/800/600', products: ['Oak Canopy Bed Frame', 'Modular Bookcase System', 'Rattan Pendant Light'], slug: 'beds' },
 ];
 
 export default function Lookbook() {
@@ -38,7 +38,7 @@ export default function Lookbook() {
     <div className="lookbook-page">
       {/* Hero */}
       <div className="lookbook-hero">
-        <img src="https://images.unsplash.com/photo-1484101403633-562f891dc89a?w=1920&q=85&auto=format&fit=crop" alt="Lookbook hero" />
+        <img src="https://picsum.photos/seed/hero1/1920/1080" alt="Lookbook hero" />
         <div className="lookbook-hero__overlay" />
         <motion.div
           className="lookbook-hero__content container"
@@ -84,7 +84,7 @@ export default function Lookbook() {
                   alt={item.title}
                   loading="lazy"
                   onError={e => {
-                    (e.target as HTMLImageElement).src = 'https://images.unsplash.com/photo-1555041469-a586c61ea9bc?w=800&q=80';
+                    (e.target as HTMLImageElement).src = 'https://picsum.photos/seed/fallback/800/600';
                   }}
                 />
                 <div className="lookbook-item__overlay">
@@ -141,3 +141,5 @@ export default function Lookbook() {
     </div>
   );
 }
+
+

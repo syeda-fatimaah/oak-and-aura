@@ -63,7 +63,7 @@ export default function CartDrawer() {
                     alt={item.product.name}
                     className="cart-item__img"
                     onError={e => {
-                      (e.target as HTMLImageElement).src = 'https://images.unsplash.com/photo-1555041469-a586c61ea9bc?w=200&q=80';
+                      (e.target as HTMLImageElement).src = 'https://picsum.photos/seed/img6/800/600';
                     }}
                   />
                   <div className="cart-item__info">
@@ -140,3 +140,5 @@ export default function CartDrawer() {
     </>
   );
 }
+
+

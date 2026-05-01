@@ -12,3 +12,4 @@ export function formatPKR(usdPrice: number): string {
 export function toPKR(usdPrice: number): number {
   return Math.round(usdPrice * PKR_RATE);
 }
+

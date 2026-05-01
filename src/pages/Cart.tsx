@@ -90,7 +90,7 @@ export default function Cart() {
                         src={item.product.images[0]}
                         alt={item.product.name}
                         onError={e => {
-                          (e.target as HTMLImageElement).src = 'https://images.unsplash.com/photo-1555041469-a586c61ea9bc?w=200&q=80';
+                          (e.target as HTMLImageElement).src = 'https://picsum.photos/seed/img7/800/600';
                         }}
                       />
                     </Link>
@@ -247,3 +247,5 @@ function Truck({ size }: { size: number }) {
     </svg>
   );
 }
+
+

@@ -23,7 +23,7 @@ export default function ProductCard({ product, onQuickView }: Props) {
     : null;
 
   const imgSrc = imgError
-    ? 'https://images.unsplash.com/photo-1555041469-a586c61ea9bc?w=600&q=80&auto=format&fit=crop'
+    ? 'https://picsum.photos/seed/img4/800/600'
     : product.images[hovered && product.images[1] ? 1 : 0];
 
   return (
@@ -114,3 +114,5 @@ export default function ProductCard({ product, onQuickView }: Props) {
     </div>
   );
 }
+
+

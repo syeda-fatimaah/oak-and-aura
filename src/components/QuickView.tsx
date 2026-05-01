@@ -39,7 +39,7 @@ export default function QuickView({ product, onClose }: Props) {
                 src={product.images[activeImg]}
                 alt={product.name}
                 onError={e => {
-                  (e.target as HTMLImageElement).src = 'https://images.unsplash.com/photo-1555041469-a586c61ea9bc?w=600&q=80';
+                  (e.target as HTMLImageElement).src = 'https://picsum.photos/seed/img5/800/600';
                 }}
               />
               {product.images.length > 1 && (
@@ -65,7 +65,7 @@ export default function QuickView({ product, onClose }: Props) {
                     src={img}
                     alt=""
                     onError={e => {
-                      (e.target as HTMLImageElement).src = 'https://images.unsplash.com/photo-1555041469-a586c61ea9bc?w=200&q=80';
+                      (e.target as HTMLImageElement).src = 'https://picsum.photos/seed/img5/800/600';
                     }}
                   />
                 </button>
@@ -155,3 +155,5 @@ export default function QuickView({ product, onClose }: Props) {
     </>
   );
 }
+
+

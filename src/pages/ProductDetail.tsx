@@ -45,7 +45,7 @@ export default function ProductDetail() {
 
   const getImgSrc = (index: number) =>
     imgErrors[index]
-      ? 'https://images.unsplash.com/photo-1555041469-a586c61ea9bc?w=800&q=80&auto=format&fit=crop'
+      ? 'https://picsum.photos/seed/img10/800/600'
       : product.images[index];
 
   const handleShare = () => {
@@ -297,3 +297,5 @@ export default function ProductDetail() {
     </div>
   );
 }
+
+
