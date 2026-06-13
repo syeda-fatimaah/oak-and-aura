@@ -21,7 +21,7 @@ export default function LoadingScreen() {
         <div className="loading-screen__logo">
           <span className="loading-screen__icon">🛋️</span>
           <h1 className="loading-screen__title">
-            Gujrat Furniture
+            Gujrati Furniture
             <span className="loading-screen__subtitle">Gulyana</span>
           </h1>
         </div>

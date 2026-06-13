@@ -114,7 +114,7 @@ export default function Checkout() {
       <div className="container">
         <div className="checkout-page__header">
           <Link to="/" className="checkout-page__logo">
-            <span>🪑</span> Gujrat Furniture Gulyana
+            <span>🪑</span> Gujrati Furniture Gulyana
           </Link>
           <div className="checkout-steps">
             {steps.map((s, i) => (

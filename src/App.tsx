@@ -21,16 +21,16 @@ import Blog from './pages/Blog';
 
 // Page title map
 const PAGE_TITLES: Record<string, string> = {
-  '/': 'Gujrat Furniture Gulyana — Quality Furniture for Your Home',
-  '/shop': 'Shop | Gujrat Furniture',
-  '/cart': 'Cart | Gujrat Furniture',
-  '/checkout': 'Checkout | Gujrat Furniture',
-  '/wishlist': 'Wishlist | Gujrat Furniture',
-  '/collections': 'Collections | Gujrat Furniture',
-  '/lookbook': 'Gallery | Gujrat Furniture',
-  '/about': 'About Us | Gujrat Furniture',
-  '/contact': 'Contact | Gujrat Furniture',
-  '/blog': 'Blog | Gujrat Furniture',
+  '/': 'Gujrati Furniture Gulyana — Quality Furniture for Your Home',
+  '/shop': 'Shop | Gujrati Furniture',
+  '/cart': 'Cart | Gujrati Furniture',
+  '/checkout': 'Checkout | Gujrati Furniture',
+  '/wishlist': 'Wishlist | Gujrati Furniture',
+  '/collections': 'Collections | Gujrati Furniture',
+  '/lookbook': 'Gallery | Gujrati Furniture',
+  '/about': 'About Us | Gujrati Furniture',
+  '/contact': 'Contact | Gujrati Furniture',
+  '/blog': 'Blog | Gujrati Furniture',
 };
 
 function ScrollToTop() {
@@ -39,7 +39,7 @@ function ScrollToTop() {
     window.scrollTo({ top: 0, behavior: 'smooth' });
     // Update page title
     const base = '/' + pathname.split('/')[1];
-    const title = PAGE_TITLES[base] || 'Gujrat Furniture Gulyana';
+    const title = PAGE_TITLES[base] || 'Gujrati Furniture Gulyana';
     document.title = title;
   }, [pathname, search]);
   return null;

@@ -61,7 +61,7 @@ export default function Contact() {
           <div className="contact-info__faq">
             <h3>Frequently Asked Questions</h3>
             {[
-              { q: 'What makes Gujrat Furniture different?', a: 'We are a trusted local business with over 10 years of experience. We offer quality furniture at competitive prices with excellent customer service.' },
+              { q: 'What makes Gujrati Furniture different?', a: 'We are a trusted local business with over 10 years of experience. We offer quality furniture at competitive prices with excellent customer service.' },
               { q: 'Do you have luxury furniture options?', a: 'Yes, we carry premium furniture pieces including luxury bedroom sets, designer sofas, and elegant dining furniture.' },
               { q: 'Is your furniture affordable?', a: 'Absolutely! We offer furniture for every budget while maintaining high quality standards.' },
               { q: 'Do you sell sofa sets?', a: 'Yes, we have a wide variety of sofa sets in different styles, fabrics, and sizes to suit your living room.' },

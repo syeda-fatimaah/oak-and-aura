@@ -18,7 +18,7 @@ const HERO_IMAGES = [
 ];
 
 const TESTIMONIALS = [
-  { name: 'Ahmed K.', location: 'Gujrat, Punjab', rating: 5, text: 'Excellent quality furniture at reasonable prices. The delivery was prompt and the staff was very helpful. Highly recommend Gujrat Furniture!' },
+  { name: 'Ahmed K.', location: 'Gujrat, Punjab', rating: 5, text: 'Excellent quality furniture at reasonable prices. The delivery was prompt and the staff was very helpful. Highly recommend Gujrati Furniture!' },
   { name: 'Fatima S.', location: 'Jalalpur Jattan', rating: 5, text: 'Beautiful sofa set that transformed our living room. The craftsmanship is outstanding and the price was very competitive.' },
   { name: 'Muhammad R.', location: 'Kharian', rating: 5, text: 'Best furniture shop in the area! Great selection and the owner is very accommodating. Will definitely buy again.' },
   { name: 'Zainab M.', location: 'Gulyana', rating: 4, text: 'Very satisfied with our dining table purchase. Good quality wood and beautiful finish. Great local business!' },
@@ -246,7 +246,7 @@ export default function Home() {
           viewport={{ once: true }}
           transition={{ duration: 0.7 }}
         >
-          <span className="lifestyle-banner__eyebrow">Gujrat Furniture Gulyana</span>
+          <span className="lifestyle-banner__eyebrow">Gujrati Furniture Gulyana</span>
           <h2>Premium Quality<br /><em>Affordable Prices</em></h2>
           <p>Every piece in our collection is crafted with care to bring comfort, style, and durability to your living spaces. Quality furniture for every home.</p>
           <Link to="/lookbook" className="btn-primary">
@@ -298,7 +298,7 @@ export default function Home() {
             variants={fadeUp}
             className="section-header"
           >
-            <h2 className="section-title">Why Choose Gujrat Furniture</h2>
+            <h2 className="section-title">Why Choose Gujrati Furniture</h2>
             <p className="section-subtitle">Your trusted furniture destination in Gulyana</p>
           </motion.div>
 
@@ -425,10 +425,10 @@ function NewsletterSection() {
       >
         <span className="newsletter-section__eyebrow">Stay Connected</span>
         <h2>Get Special Offers & Updates</h2>
-        <p>Subscribe for exclusive deals, new arrivals, and special promotions from Gujrat Furniture.</p>
+        <p>Subscribe for exclusive deals, new arrivals, and special promotions from Gujrati Furniture.</p>
         {submitted ? (
           <div className="newsletter-section__success">
-            <span>✓</span> Welcome to Gujrat Furniture! Check your inbox for updates.
+            <span>✓</span> Welcome to Gujrati Furniture! Check your inbox for updates.
           </div>
         ) : (
           <form onSubmit={handleSubmit} className="newsletter-section__form">

@@ -32,7 +32,7 @@ export default function About() {
         >
           <span className="about-hero__eyebrow">Our Story</span>
           <h1>Quality Furniture<br /><em>For Every Home</em></h1>
-          <p>Located on Naseera Road, Gulyana, Gujrat Furniture has been serving the Kharian community with premium quality furniture at affordable prices.</p>
+          <p>Located on Naseera Road, Gulyana, Gujrati Furniture has been serving the Kharian community with premium quality furniture at affordable prices.</p>
         </motion.div>
       </div>
 
@@ -48,7 +48,7 @@ export default function About() {
           <motion.div className="about-story__text" variants={fadeUp}>
             <span className="about-eyebrow">Who We Are</span>
             <h2>Your Trusted Furniture<br />Partner in Gulyana</h2>
-            <p>Gujrat Furniture Gulyana is a trusted furniture business owned by Abdul Rahman, located on Naseera Road in the heart of Gulyana. We are dedicated to providing high-quality furniture to homes and offices in Kharian and surrounding areas.</p>
+            <p>Gujrati Furniture Gulyana is a trusted furniture business owned by Abdul Rahman, located on Naseera Road in the heart of Gulyana. We are dedicated to providing high-quality furniture to homes and offices in Kharian and surrounding areas.</p>
             <p>From classic wooden furniture to modern designs, we have something for every taste and budget. Our commitment to quality and customer satisfaction has made us a trusted name in the local community. Visit us or call 0348 0444147 for more information.</p>
             <Link to="/shop" className="btn-primary">
               Explore Our Collection <ArrowRight size={16} />

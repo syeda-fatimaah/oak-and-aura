@@ -1,10 +1,10 @@
-# Gujrat Furniture Gulyana
+# Gujrati Furniture Gulyana
 
-A premium furniture e-commerce website for **Gujrat Furniture Gulyana** — located on Naseera Road, Gulyana, Kharian. Built with React + TypeScript + Vite.
+A premium furniture e-commerce website for **Gujrati Furniture Gulyana** — located on Naseera Road, Gulyana, Kharian. Built with React + TypeScript + Vite.
 
 ## 🛋️ About
 
-Gujrat Furniture Gulyana is a trusted furniture business owned by **Abdul Rahman**, serving the Kharian community with high-quality furniture at affordable prices. This website showcases their complete range of sofas, bedroom sets, dressing tables, and bridal furniture.
+Gujrati Furniture Gulyana is a trusted furniture business owned by **Abdul Rahman**, serving the Kharian community with high-quality furniture at affordable prices. This website showcases their complete range of sofas, bedroom sets, dressing tables, and bridal furniture.
 
 ## ✨ Features
 
@@ -49,4 +49,4 @@ npm run build
 
 ---
 
-© 2026 Gujrat Furniture Gulyana. All rights reserved.
+© 2026 Gujrati Furniture Gulyana. All rights reserved.

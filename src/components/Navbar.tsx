@@ -49,9 +49,9 @@ export default function Navbar() {
         <div className="navbar__inner container">
           {/* Logo */}
           <Link to="/" className="navbar__logo">
-            <img src={`${import.meta.env.BASE_URL}logoo.png`} alt="Gujrat Furniture Gulyana" className="navbar__logo-img" />
+            <img src={`${import.meta.env.BASE_URL}logoo.png`} alt="Gujrati Furniture Gulyana" className="navbar__logo-img" />
             <div>
-              <span className="navbar__logo-name">Gujrat Furniture</span>
+              <span className="navbar__logo-name">Gujrati Furniture</span>
               <span className="navbar__logo-tagline">Gulyana</span>
             </div>
           </Link>

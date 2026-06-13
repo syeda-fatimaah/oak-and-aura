@@ -17,7 +17,7 @@ export default function Blog() {
           <motion.div initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6 }}>
             <span className="blog-eyebrow">Our Journal</span>
             <h1>Stories, Ideas & Inspiration</h1>
-            <p>Design tips, furniture guides, and the thinking behind Gujrat Furniture Gulyana.</p>
+            <p>Design tips, furniture guides, and the thinking behind Gujrati Furniture Gulyana.</p>
           </motion.div>
         </div>
       </div>
@@ -33,7 +33,7 @@ export default function Blog() {
           <div className="blog-featured__img">
             <img
               src={`${import.meta.env.BASE_URL}images/sofas/sofa-set7.png`}
-              alt="Gujrat Furniture Gulyana showroom"
+              alt="Gujrati Furniture Gulyana showroom"
               onError={e => { (e.target as HTMLImageElement).src = `${import.meta.env.BASE_URL}images/sofas/sofa-set1.png`; }}
             />
             <span className="blog-tag">Brand Story</span>
@@ -41,27 +41,27 @@ export default function Blog() {
 
           <div className="blog-featured__body">
             <div className="blog-meta">
-              <span><User size={13} /> Gujrat Furniture Gulyana Team</span>
+              <span><User size={13} /> Gujrati Furniture Gulyana Team</span>
               <span><Clock size={13} /> 5 min read</span>
               <span><Tag size={13} /> Design, Lifestyle</span>
             </div>
 
-            <h2>Gujrat Furniture Gulyana – Where Craftsmanship Meets Modern Living</h2>
+            <h2>Gujrati Furniture Gulyana – Where Craftsmanship Meets Modern Living</h2>
 
             <p className="blog-featured__lead">
-              In a world where homes are more than just living spaces, furniture plays a powerful role in defining comfort, personality, and lifestyle. Gujrat Furniture Gulyana emerges as a brand that blends timeless craftsmanship with modern aesthetics, offering furniture that transforms houses into meaningful homes.
+              In a world where homes are more than just living spaces, furniture plays a powerful role in defining comfort, personality, and lifestyle. Gujrati Furniture Gulyana emerges as a brand that blends timeless craftsmanship with modern aesthetics, offering furniture that transforms houses into meaningful homes.
             </p>
 
             {/* Article sections */}
             <div className="blog-article">
 
               <section className="blog-section">
-                <h3>The Essence of Gujrat Furniture Gulyana</h3>
+                <h3>The Essence of Gujrati Furniture Gulyana</h3>
                 <p>
-                  Gujrat Furniture Gulyana is built on the idea that furniture should not only serve a purpose but also tell a story. Each piece reflects a careful balance between durability and elegance. Inspired by natural materials and contemporary design trends, the brand brings together the warmth of wood and the sophistication of modern interiors.
+                  Gujrati Furniture Gulyana is built on the idea that furniture should not only serve a purpose but also tell a story. Each piece reflects a careful balance between durability and elegance. Inspired by natural materials and contemporary design trends, the brand brings together the warmth of wood and the sophistication of modern interiors.
                 </p>
                 <p>
-                  From sleek coffee tables to luxurious sofas and elegant dining sets, Gujrat Furniture Gulyana ensures that every product is crafted with attention to detail and designed to elevate everyday living.
+                  From sleek coffee tables to luxurious sofas and elegant dining sets, Gujrati Furniture Gulyana ensures that every product is crafted with attention to detail and designed to elevate everyday living.
                 </p>
               </section>
 
@@ -72,7 +72,7 @@ export default function Blog() {
               <section className="blog-section">
                 <h3>Designed for Modern Homes</h3>
                 <p>
-                  Modern living demands versatility, and Gujrat Furniture Gulyana understands that perfectly. Their collections are designed to fit seamlessly into various interior styles — whether minimalistic, classic, or contemporary.
+                  Modern living demands versatility, and Gujrati Furniture Gulyana understands that perfectly. Their collections are designed to fit seamlessly into various interior styles — whether minimalistic, classic, or contemporary.
                 </p>
                 <ul className="blog-list">
                   <li>Clean and elegant designs</li>
@@ -88,7 +88,7 @@ export default function Blog() {
               <div className="blog-img-break">
                 <img
                   src={`${import.meta.env.BASE_URL}images/sofas/sofa-set3.png`}
-                  alt="Gujrat Furniture Gulyana navy sofa set"
+                  alt="Gujrati Furniture Gulyana navy sofa set"
                   loading="lazy"
                   onError={e => { (e.target as HTMLImageElement).src = `${import.meta.env.BASE_URL}images/sofas/sofa-set2.png`; }}
                 />
@@ -97,17 +97,17 @@ export default function Blog() {
               <section className="blog-section">
                 <h3>Quality You Can Trust</h3>
                 <p>
-                  At Gujrat Furniture Gulyana, quality is not just a promise — it is a standard. Using premium materials such as solid wood, high-quality fabrics, and durable finishes, the brand ensures longevity in every product.
+                  At Gujrati Furniture Gulyana, quality is not just a promise — it is a standard. Using premium materials such as solid wood, high-quality fabrics, and durable finishes, the brand ensures longevity in every product.
                 </p>
                 <p>
-                  The craftsmanship reflects precision, care, and a deep understanding of what customers expect from high-end furniture. This commitment to quality makes Gujrat Furniture Gulyana a reliable choice for long-term investment.
+                  The craftsmanship reflects precision, care, and a deep understanding of what customers expect from high-end furniture. This commitment to quality makes Gujrati Furniture Gulyana a reliable choice for long-term investment.
                 </p>
               </section>
 
               <section className="blog-section">
                 <h3>Comfort Meets Aesthetic</h3>
                 <p>
-                  Furniture is not just about looks — it's about how it feels. Gujrat Furniture Gulyana focuses on ergonomic designs that provide maximum comfort without compromising on style.
+                  Furniture is not just about looks — it's about how it feels. Gujrati Furniture Gulyana focuses on ergonomic designs that provide maximum comfort without compromising on style.
                 </p>
                 <p>
                   Whether it's a cozy sofa for your living room or a sturdy bed for restful nights, every piece is designed with the user's comfort in mind.
@@ -117,7 +117,7 @@ export default function Blog() {
               <section className="blog-section">
                 <h3>A Seamless Shopping Experience</h3>
                 <p>
-                  Gujrat Furniture Gulyana offers a smooth and user-friendly online shopping experience. With a responsive website design, customers can easily browse products, view detailed descriptions, and place orders from any device.
+                  Gujrati Furniture Gulyana offers a smooth and user-friendly online shopping experience. With a responsive website design, customers can easily browse products, view detailed descriptions, and place orders from any device.
                 </p>
                 <ul className="blog-list">
                   <li>Easy navigation across all devices</li>
@@ -130,7 +130,7 @@ export default function Blog() {
               <div className="blog-img-break">
                 <img
                   src={`${import.meta.env.BASE_URL}images/beds/bed1.png`}
-                  alt="Gujrat Furniture Gulyana luxury bedroom"
+                  alt="Gujrati Furniture Gulyana luxury bedroom"
                   loading="lazy"
                   onError={e => { (e.target as HTMLImageElement).src = `${import.meta.env.BASE_URL}images/beds/bed9.png`; }}
                 />
@@ -139,7 +139,7 @@ export default function Blog() {
               <section className="blog-section">
                 <h3>Sustainability & Responsibility</h3>
                 <p>
-                  In today's world, sustainability matters. Gujrat Furniture Gulyana aims to incorporate eco-friendly practices by using responsibly sourced materials and minimizing waste in production processes.
+                  In today's world, sustainability matters. Gujrati Furniture Gulyana aims to incorporate eco-friendly practices by using responsibly sourced materials and minimizing waste in production processes.
                 </p>
                 <p>
                   This approach ensures that customers not only invest in beautiful furniture but also contribute to a better environment.
@@ -147,12 +147,12 @@ export default function Blog() {
               </section>
 
               <div className="blog-closing">
-                <h3>Transform Your Space with Gujrat Furniture Gulyana</h3>
+                <h3>Transform Your Space with Gujrati Furniture Gulyana</h3>
                 <p>
-                  Your home deserves furniture that reflects your style and enhances your lifestyle. Gujrat Furniture Gulyana is more than just a furniture brand — it is a symbol of quality, comfort, and timeless design.
+                  Your home deserves furniture that reflects your style and enhances your lifestyle. Gujrati Furniture Gulyana is more than just a furniture brand — it is a symbol of quality, comfort, and timeless design.
                 </p>
                 <p className="blog-closing__tagline">
-                  <em>Gujrat Furniture Gulyana – Crafted for Living, Designed for You.</em>
+                  <em>Gujrati Furniture Gulyana – Crafted for Living, Designed for You.</em>
                 </p>
                 <Link to="/shop" className="btn-primary">
                   Explore the Collection <ArrowRight size={16} />

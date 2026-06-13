@@ -23,7 +23,7 @@ export default function Footer() {
           <div className="footer__logo">
             <span>🛋️</span>
             <div>
-              <span className="footer__logo-name">Gujrat Furniture</span>
+              <span className="footer__logo-name">Gujrati Furniture</span>
               <span className="footer__logo-tagline">Gulyana</span>
             </div>
           </div>
@@ -105,7 +105,7 @@ export default function Footer() {
       </div>
 
       <div className="footer__bottom container">
-        <p>© 2026 Gujrat Furniture Gulyana. All rights reserved.</p>
+        <p>© 2026 Gujrati Furniture Gulyana. All rights reserved.</p>
         <div className="footer__bottom-links">
           <Link to="/contact">Privacy Policy</Link>
           <Link to="/contact">Terms of Service</Link>
