@@ -2,8 +2,8 @@
 
 .about-hero {
   position: relative;
-  height: 55vh;
-  min-height: 380px;
+  height: 70vh;
+  min-height: 480px;
   display: flex;
   align-items: center;
   margin-bottom: 80px;
@@ -11,8 +11,14 @@
 }
 
 .about-hero__bg { position: absolute; inset: 0; }
-.about-hero__bg img { width: 100%; height: 100%; object-fit: cover; }
-.about-hero__overlay { position: absolute; inset: 0; background: rgba(0,0,0,0.6); }
+.about-hero__bg img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  /* Focus on the furniture (lower portion) rather than the ceiling */
+  object-position: center 70%;
+}
+.about-hero__overlay { position: absolute; inset: 0; background: rgba(0,0,0,0.5); }
 
 .about-hero__content {
   position: relative;
@@ -98,7 +104,11 @@
 .about-story__img img {
   width: 100%;
   aspect-ratio: 4/3;
-  object-fit: cover;
+  /* Show full furniture scene without cropping */
+  object-fit: contain;
+  object-position: center;
+  background: var(--bg);
+  padding: 12px;
 }
 
 .about-story__img-badge {

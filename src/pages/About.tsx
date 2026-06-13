@@ -4,10 +4,10 @@ import { motion } from 'framer-motion';
 import './About.css';
 
 const VALUES = [
-  { icon: <Leaf size={24} />, title: 'Sustainability', desc: 'Every piece is crafted with sustainably sourced materials and eco-conscious manufacturing processes.' },
-  { icon: <Award size={24} />, title: 'Craftsmanship', desc: 'We partner with skilled artisans who bring decades of expertise to every joint, finish, and detail.' },
-  { icon: <Users size={24} />, title: 'Community', desc: 'We believe great design should be accessible. Our pricing reflects quality without unnecessary markup.' },
-  { icon: <Globe size={24} />, title: 'Pakistan-Wide Delivery', desc: 'From Karachi to Peshawar, Lahore to Quetta — we deliver to all major cities across Pakistan.' },
+  { icon: <Award size={24} />, title: 'Quality First', desc: 'We carefully select high-quality materials and work with skilled craftsmen to ensure every piece meets our standards.' },
+  { icon: <Users size={24} />, title: 'Customer Focus', desc: 'Your satisfaction is our priority. We listen to your needs and help you find the perfect furniture for your space.' },
+  { icon: <Globe size={24} />, title: 'Local Service', desc: 'Conveniently located on Naseera Road, Gulyana. Serving Kharian, Jalalpur Jattan and surrounding areas.' },
+  { icon: <Leaf size={24} />, title: 'Fair Pricing', desc: 'We believe in honest pricing. Quality furniture doesn\'t have to be expensive - we offer the best value for your money.' },
 ];
 
 const fadeUp = {
@@ -21,7 +21,7 @@ export default function About() {
       {/* Hero */}
       <div className="about-hero">
         <div className="about-hero__bg">
-          <img src={`${import.meta.env.BASE_URL}images/about-hero.jpg`} alt="" />
+          <img src={`${import.meta.env.BASE_URL}images/about-cta.jpg`} alt="" />
           <div className="about-hero__overlay" />
         </div>
         <motion.div
@@ -31,8 +31,8 @@ export default function About() {
           transition={{ duration: 0.7 }}
         >
           <span className="about-hero__eyebrow">Our Story</span>
-          <h1>Furniture That<br /><em>Tells a Story</em></h1>
-          <p>Founded in 2019, Oak & Aura was born from a simple belief: that beautiful, well-crafted furniture should be accessible to everyone.</p>
+          <h1>Quality Furniture<br /><em>For Every Home</em></h1>
+          <p>Located on Naseera Road, Gulyana, Gujrat Furniture has been serving the Kharian community with premium quality furniture at affordable prices.</p>
         </motion.div>
       </div>
 
@@ -47,9 +47,9 @@ export default function About() {
         >
           <motion.div className="about-story__text" variants={fadeUp}>
             <span className="about-eyebrow">Who We Are</span>
-            <h2>Transforming Spaces,<br />One Piece at a Time</h2>
-            <p>Oak & Aura Furnishings was founded with a vision to bridge the gap between luxury design and everyday living. We believe your home should be a reflection of who you are — a sanctuary that inspires, comforts, and endures.</p>
-            <p>Every piece in our collection is thoughtfully designed by our in-house team and crafted by skilled artisans using sustainably sourced materials. From the initial sketch to the final delivery, quality is never compromised.</p>
+            <h2>Your Trusted Furniture<br />Partner in Gulyana</h2>
+            <p>Gujrat Furniture Gulyana is a trusted furniture business owned by Abdul Rahman, located on Naseera Road in the heart of Gulyana. We are dedicated to providing high-quality furniture to homes and offices in Kharian and surrounding areas.</p>
+            <p>From classic wooden furniture to modern designs, we have something for every taste and budget. Our commitment to quality and customer satisfaction has made us a trusted name in the local community. Visit us or call 0348 0444147 for more information.</p>
             <Link to="/shop" className="btn-primary">
               Explore Our Collection <ArrowRight size={16} />
             </Link>
@@ -61,8 +61,8 @@ export default function About() {
               loading="lazy"
             />
             <div className="about-story__img-badge">
-              <span className="about-story__img-badge-num">5+</span>
-              <span>Years of Excellence</span>
+              <span className="about-story__img-badge-num">10+</span>
+              <span>Years of Service</span>
             </div>
           </motion.div>
         </motion.div>
@@ -72,10 +72,10 @@ export default function About() {
       <section className="about-stats">
         <div className="container about-stats__grid">
           {[
-            { num: '2,400+', label: 'Happy Customers' },
-            { num: '150+', label: 'Products' },
-            { num: '50+', label: 'Cities Served' },
-            { num: '4.9★', label: 'Average Rating' },
+            { num: '1,000+', label: 'Happy Customers' },
+            { num: '100+', label: 'Products' },
+            { num: '10+', label: 'Years Experience' },
+            { num: '5★', label: 'Customer Rating' },
           ].map((stat, i) => (
             <motion.div
               key={i}

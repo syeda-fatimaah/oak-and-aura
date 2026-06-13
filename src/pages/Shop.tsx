@@ -10,7 +10,7 @@ import QuickView from '../components/QuickView';
 import type { Product, FilterState, SortOption } from '../types';
 import './Shop.css';
 
-const PRICE_MAX = 2000;
+const PRICE_MAX = 250000;
 
 export default function Shop() {
   const [searchParams, setSearchParams] = useSearchParams();
@@ -182,7 +182,7 @@ export default function Shop() {
                 type="range"
                 min={0}
                 max={PRICE_MAX}
-                step={50}
+                step={5000}
                 value={filters.priceRange[1]}
                 onChange={e => setFilters(f => ({ ...f, priceRange: [f.priceRange[0], Number(e.target.value)] }))}
                 className="filter-price__slider"

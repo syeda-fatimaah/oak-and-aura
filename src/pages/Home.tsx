@@ -12,16 +12,16 @@ import './Home.css';
 const BASE = import.meta.env.BASE_URL;
 
 const HERO_IMAGES = [
-  `${BASE}images/hero1.jpg`,
-  `${BASE}images/hero2.jpg`,
-  `${BASE}images/hero3.jpg`,
+  `${BASE}images/hero-main.jpg`,
+  `${BASE}images/sofas/sofa-set3.png`,
+  `${BASE}images/sofas/sofa-set2.png`,
 ];
 
 const TESTIMONIALS = [
-  { name: 'Ayesha R.', location: 'Karachi, Sindh', rating: 5, text: 'The Nordic Oak Sofa completely transformed my drawing room. The quality is exceptional and it arrived perfectly on time. Absolutely love it!' },
-  { name: 'Usman K.', location: 'Lahore, Punjab', rating: 5, text: 'Oak & Aura has the most beautiful furniture I have ever seen. The Aria Platform Bed is stunning and incredibly comfortable. Worth every rupee!' },
-  { name: 'Sana M.', location: 'Islamabad', rating: 5, text: 'Fast delivery, beautiful packaging, and the Harvest Dining Table is even more gorgeous in person. My guests always compliment it.' },
-  { name: 'Bilal T.', location: 'Faisalabad, Punjab', rating: 4, text: 'Great quality and design. The Japandi Sideboard fits perfectly in my hallway. Customer service was also very helpful.' },
+  { name: 'Ahmed K.', location: 'Gujrat, Punjab', rating: 5, text: 'Excellent quality furniture at reasonable prices. The delivery was prompt and the staff was very helpful. Highly recommend Gujrat Furniture!' },
+  { name: 'Fatima S.', location: 'Jalalpur Jattan', rating: 5, text: 'Beautiful sofa set that transformed our living room. The craftsmanship is outstanding and the price was very competitive.' },
+  { name: 'Muhammad R.', location: 'Kharian', rating: 5, text: 'Best furniture shop in the area! Great selection and the owner is very accommodating. Will definitely buy again.' },
+  { name: 'Zainab M.', location: 'Gulyana', rating: 4, text: 'Very satisfied with our dining table purchase. Good quality wood and beautiful finish. Great local business!' },
 ];
 
 const CATEGORY_IMAGES: Record<string, string> = {
@@ -47,6 +47,14 @@ export default function Home() {
   const [quickViewProduct, setQuickViewProduct] = useState<Product | null>(null);
   const [testimonialIndex, setTestimonialIndex] = useState(0);
   const heroRef = useRef<HTMLDivElement>(null);
+
+  // Preload hero images
+  useEffect(() => {
+    HERO_IMAGES.forEach(src => {
+      const img = new Image();
+      img.src = src;
+    });
+  }, []);
 
   useEffect(() => {
     const timer = setInterval(() => {
@@ -91,18 +99,18 @@ export default function Home() {
             transition={{ duration: 0.8 }}
             className="hero__text"
           >
-            <span className="hero__eyebrow">New Collection 2026</span>
+            <span className="hero__eyebrow">Quality Furniture 2026</span>
             <h1 className="hero__title">
-              Furniture That<br />
-              <em>Defines Your Space</em>
+              Premium Furniture<br />
+              <em>For Your Home</em>
             </h1>
-            <p className="hero__subtitle">Minimal. Modern. Timeless.</p>
+            <p className="hero__subtitle">Affordable. Reliable.</p>
             <div className="hero__ctas">
               <Link to="/shop" className="btn-primary hero__cta-primary">
                 Shop Collection <ArrowRight size={18} />
               </Link>
               <Link to="/lookbook" className="btn-outline-white">
-                Explore Lookbook
+                Explore Gallery
               </Link>
             </div>
           </motion.div>
@@ -138,7 +146,7 @@ export default function Home() {
       {/* ===== MARQUEE STRIP ===== */}
       <div className="marquee-strip">
         <div className="marquee-track">
-          {['Free Delivery Over Rs. 50,000', 'Premium Materials', 'Easy Returns', '2-Year Warranty', 'Sustainable Sourcing', 'Expert Craftsmanship', 'Free Delivery Over Rs. 50,000', 'Premium Materials', 'Easy Returns', '2-Year Warranty', 'Sustainable Sourcing', 'Expert Craftsmanship'].map((text, i) => (
+          {['Quality Furniture', 'Competitive Prices', 'Custom Orders Available', 'Nationwide Delivery', 'Expert Craftsmanship', 'Naseera Road Gulyana', 'Quality Furniture', 'Competitive Prices', 'Custom Orders Available', 'Nationwide Delivery', 'Expert Craftsmanship', 'Naseera Road Gulyana'].map((text, i) => (
             <span key={i}>{text} <span className="marquee-dot">✦</span></span>
           ))}
         </div>
@@ -238,11 +246,11 @@ export default function Home() {
           viewport={{ once: true }}
           transition={{ duration: 0.7 }}
         >
-          <span className="lifestyle-banner__eyebrow">The Oak & Aura Way</span>
-          <h2>Design Spaces That<br /><em>Feel Like Home</em></h2>
-          <p>Every piece in our collection is thoughtfully designed to bring warmth, elegance, and functionality to your living spaces. Prices start from {formatPKR(89)}.</p>
+          <span className="lifestyle-banner__eyebrow">Gujrat Furniture Gulyana</span>
+          <h2>Premium Quality<br /><em>Affordable Prices</em></h2>
+          <p>Every piece in our collection is crafted with care to bring comfort, style, and durability to your living spaces. Quality furniture for every home.</p>
           <Link to="/lookbook" className="btn-primary">
-            View Lookbook <ArrowRight size={18} />
+            View Gallery <ArrowRight size={18} />
           </Link>
         </motion.div>
       </section>
@@ -290,8 +298,8 @@ export default function Home() {
             variants={fadeUp}
             className="section-header"
           >
-            <h2 className="section-title">Why Oak & Aura</h2>
-            <p className="section-subtitle">We believe great furniture should be accessible to everyone</p>
+            <h2 className="section-title">Why Choose Gujrat Furniture</h2>
+            <p className="section-subtitle">Your trusted furniture destination in Gulyana</p>
           </motion.div>
 
           <motion.div
@@ -302,12 +310,12 @@ export default function Home() {
             variants={stagger}
           >
             {[
-              { icon: <Package size={28} />, title: 'Premium Materials', desc: 'Sustainably sourced solid wood, premium fabrics, and quality metals that last a lifetime.' },
-              { icon: <Star size={28} />, title: 'Modern Designs', desc: 'Curated by expert designers to bring timeless aesthetics to contemporary living.' },
-              { icon: <Truck size={28} />, title: 'Pakistan-Wide Delivery', desc: 'Karachi, Lahore, Islamabad, Peshawar — we deliver to all major cities across Pakistan.' },
-              { icon: <RefreshCw size={28} />, title: 'Easy Returns', desc: "30-day hassle-free returns. If you're not in love with it, we'll make it right." },
-              { icon: <Shield size={28} />, title: '2-Year Warranty', desc: 'Every piece comes with a comprehensive 2-year warranty for complete peace of mind.' },
-              { icon: <span style={{ fontSize: '1.5rem' }}>🌱</span>, title: 'Sustainable', desc: 'Eco-friendly practices from sourcing to packaging and delivery.' },
+              { icon: <Package size={28} />, title: 'Quality Materials', desc: 'High-quality wood and premium fabrics that ensure durability and comfort for years to come.' },
+              { icon: <Star size={28} />, title: 'Beautiful Designs', desc: 'Wide range of modern and classic furniture designs to match your home décor perfectly.' },
+              { icon: <Truck size={28} />, title: 'Nationwide Delivery', desc: 'Fast and reliable delivery service all over Pakistan. We deliver to all major cities and towns.' },
+              { icon: <RefreshCw size={28} />, title: 'Customer Satisfaction', desc: 'We stand behind our products and ensure every customer is completely satisfied.' },
+              { icon: <Shield size={28} />, title: 'Warranty Protection', desc: 'All furniture comes with warranty coverage for your complete peace of mind.' },
+              { icon: <span style={{ fontSize: '1.5rem' }}>💰</span>, title: 'Best Prices', desc: 'Competitive pricing without compromising on quality. Great value for your money.' },
             ].map((item, i) => (
               <motion.div key={i} className="why-card" variants={fadeUp}>
                 <div className="why-card__icon">{item.icon}</div>
@@ -415,12 +423,12 @@ function NewsletterSection() {
         viewport={{ once: true }}
         transition={{ duration: 0.6 }}
       >
-        <span className="newsletter-section__eyebrow">Join the Community</span>
-        <h2>Get 10% Off Your First Order</h2>
-        <p>Subscribe for exclusive offers, design inspiration, and early access to new collections.</p>
+        <span className="newsletter-section__eyebrow">Stay Connected</span>
+        <h2>Get Special Offers & Updates</h2>
+        <p>Subscribe for exclusive deals, new arrivals, and special promotions from Gujrat Furniture.</p>
         {submitted ? (
           <div className="newsletter-section__success">
-            <span>✓</span> Welcome to Oak & Aura! Check your inbox for your discount code.
+            <span>✓</span> Welcome to Gujrat Furniture! Check your inbox for updates.
           </div>
         ) : (
           <form onSubmit={handleSubmit} className="newsletter-section__form">
@@ -437,7 +445,7 @@ function NewsletterSection() {
             </button>
           </form>
         )}
-        <p className="newsletter-section__privacy">No spam, ever. Unsubscribe at any time.</p>
+        <p className="newsletter-section__privacy">We respect your privacy. Unsubscribe at any time.</p>
       </motion.div>
     </section>
   );

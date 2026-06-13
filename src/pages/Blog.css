@@ -51,15 +51,14 @@
   overflow: hidden;
   margin-bottom: 36px;
   width: 100%;
-  height: 400px;
-  background: var(--border);
+  /* No fixed height — image fills width at its natural ratio */
 }
 
 .blog-featured__img img {
   width: 100%;
-  height: 100%;
-  object-fit: cover;
+  height: auto;
   display: block;
+  border-radius: var(--radius);
 }
 
 .blog-tag {
@@ -170,15 +169,14 @@
   border-radius: var(--radius);
   overflow: hidden;
   width: 100%;
-  height: 320px;
-  background: var(--border);
+  /* No fixed height — image fills width at its natural ratio */
 }
 
 .blog-img-break img {
   width: 100%;
-  height: 100%;
-  object-fit: cover;
+  height: auto;
   display: block;
+  border-radius: var(--radius);
 }
 
 .blog-closing {
@@ -297,7 +295,5 @@
 }
 
 @media (max-width: 480px) {
-  .blog-featured__img { height: 220px; }
-  .blog-img-break { height: 200px; }
   .blog-meta { gap: 12px; }
 }

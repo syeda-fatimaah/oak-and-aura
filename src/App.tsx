@@ -5,6 +5,8 @@ import Navbar from './components/Navbar';
 import Footer from './components/Footer';
 import CartDrawer from './components/CartDrawer';
 import Toast from './components/Toast';
+import LoadingScreen from './components/LoadingScreen';
+import WhatsAppButton from './components/WhatsAppButton';
 import Home from './pages/Home';
 import Shop from './pages/Shop';
 import ProductDetail from './pages/ProductDetail';
@@ -19,16 +21,16 @@ import Blog from './pages/Blog';
 
 // Page title map
 const PAGE_TITLES: Record<string, string> = {
-  '/': 'Oak & Aura — Furniture That Defines Your Space',
-  '/shop': 'Shop | Oak & Aura',
-  '/cart': 'Cart | Oak & Aura',
-  '/checkout': 'Checkout | Oak & Aura',
-  '/wishlist': 'Wishlist | Oak & Aura',
-  '/collections': 'Collections | Oak & Aura',
-  '/lookbook': 'Lookbook | Oak & Aura',
-  '/about': 'About Us | Oak & Aura',
-  '/contact': 'Contact | Oak & Aura',
-  '/blog': 'Blog | Oak & Aura',
+  '/': 'Gujrat Furniture Gulyana — Quality Furniture for Your Home',
+  '/shop': 'Shop | Gujrat Furniture',
+  '/cart': 'Cart | Gujrat Furniture',
+  '/checkout': 'Checkout | Gujrat Furniture',
+  '/wishlist': 'Wishlist | Gujrat Furniture',
+  '/collections': 'Collections | Gujrat Furniture',
+  '/lookbook': 'Gallery | Gujrat Furniture',
+  '/about': 'About Us | Gujrat Furniture',
+  '/contact': 'Contact | Gujrat Furniture',
+  '/blog': 'Blog | Gujrat Furniture',
 };
 
 function ScrollToTop() {
@@ -37,7 +39,7 @@ function ScrollToTop() {
     window.scrollTo({ top: 0, behavior: 'smooth' });
     // Update page title
     const base = '/' + pathname.split('/')[1];
-    const title = PAGE_TITLES[base] || 'Oak & Aura';
+    const title = PAGE_TITLES[base] || 'Gujrat Furniture Gulyana';
     document.title = title;
   }, [pathname, search]);
   return null;
@@ -88,6 +90,7 @@ function AppLayout() {
       </main>
       <Footer />
       <BackToTop />
+      <WhatsAppButton />
     </>
   );
 }
@@ -95,7 +98,7 @@ function AppLayout() {
 function NotFound() {
   return (
     <div className="not-found-page">
-      <span className="not-found-page__icon">🪑</span>
+      <span className="not-found-page__icon">🛋️</span>
       <h1 className="not-found-page__code">404</h1>
       <p className="not-found-page__msg">This page seems to have wandered off.</p>
       <a href="/#/" className="btn-primary">Back to Home</a>
@@ -107,6 +110,7 @@ export default function App() {
   return (
     <HashRouter>
       <AppProvider>
+        <LoadingScreen />
         <AppLayout />
       </AppProvider>
     </HashRouter>

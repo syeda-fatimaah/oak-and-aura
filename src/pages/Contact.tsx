@@ -35,32 +35,25 @@ export default function Contact() {
 
           <div className="contact-info__items">
             <div className="contact-info__item">
-              <div className="contact-info__icon"><Mail size={20} /></div>
-              <div>
-                <strong>Email Us</strong>
-                <a href="mailto:hello@oakandaura.pk">hello@oakandaura.pk</a>
-              </div>
-            </div>
-            <div className="contact-info__item">
               <div className="contact-info__icon"><Phone size={20} /></div>
               <div>
-                <strong>Call Us</strong>
-                <a href="tel:+922134567890">+92 21 3456 7890</a>
+                <strong>Call Abdul Rahman</strong>
+                <a href="tel:+923480444147">0348 0444147</a>
               </div>
             </div>
             <div className="contact-info__item">
               <div className="contact-info__icon"><MapPin size={20} /></div>
               <div>
-                <strong>Visit Us</strong>
-                <span>Plot 45, Clifton Block 5, Karachi, Sindh</span>
+                <strong>Visit Our Showroom</strong>
+                <span>Naseera Road, Gulyana, Kharian</span>
               </div>
             </div>
             <div className="contact-info__item">
               <div className="contact-info__icon"><Clock size={20} /></div>
               <div>
                 <strong>Business Hours</strong>
-                <span>Mon–Fri: 9am–6pm PKT</span>
-                <span>Sat: 10am–4pm PKT</span>
+                <span>Mon–Sat: 9am–8pm</span>
+                <span>Sunday: Closed</span>
               </div>
             </div>
           </div>
@@ -68,21 +61,19 @@ export default function Contact() {
           <div className="contact-info__faq">
             <h3>Frequently Asked Questions</h3>
             {[
-              { q: 'What makes Oak & Aura different from other furniture stores?', a: 'We combine timeless craftsmanship with modern design sensibility. Every piece is built to last and styled to impress.' },
-              { q: 'Do you offer luxury furniture options?', a: 'Yes — our premium collection features hand-finished pieces with solid wood frames, premium upholstery, and elegant detailing.' },
-              { q: 'Is Oak & Aura furniture affordable?', a: 'We offer a range of price points. Quality doesn\'t have to break the bank — our mid-range line delivers exceptional value.' },
-              { q: 'Do you sell sofa sets and living room furniture?', a: 'Absolutely. Our living room range includes modern sofas, sectionals, accent chairs, and complete lounge sets.' },
-              { q: 'What bedroom furniture do you carry?', a: 'We carry beds, dressers, wardrobes, nightstands, and full bedroom sets — including bridal and master bedroom collections.' },
-              { q: 'Can I order a dining table in a custom size?', a: 'Yes, we offer customization on select dining tables. Reach out via the contact form and our team will assist you.' },
-              { q: 'Do you offer made-to-order or customized furniture?', a: 'We do. Share your dimensions, material preferences, and style — our craftsmen will build it to your exact specs.' },
-              { q: 'What materials do you use?', a: 'We work with solid sheesham wood, engineered wood, premium fabric, and genuine leather depending on the collection.' },
-              { q: 'Do you provide complete home furnishing solutions?', a: 'Yes — from the bedroom to the TV lounge, we can furnish your entire home with a cohesive, curated look.' },
-              { q: 'How long does delivery take?', a: 'Standard delivery is 3–5 working days. For custom orders, lead time is typically 2–3 weeks.' },
-              { q: 'Do you deliver nationwide?', a: 'Yes, we deliver to all major cities. Delivery charges vary by location and are calculated at checkout.' },
-              { q: 'Do you offer assembly services?', a: 'Our white glove delivery includes professional assembly and room placement at no extra charge.' },
-              { q: 'What is your return policy?', a: '30-day hassle-free returns on all stocked items in original condition. Custom orders are non-refundable.' },
-              { q: 'Can I see the furniture before buying?', a: 'You can visit our showroom or browse detailed photos and dimensions on each product page.' },
-              { q: 'How do I care for wooden furniture?', a: 'Wipe with a dry or slightly damp cloth. Avoid direct sunlight and use furniture polish every few months to maintain the finish.' },
+              { q: 'What makes Gujrat Furniture different?', a: 'We are a trusted local business with over 10 years of experience. We offer quality furniture at competitive prices with excellent customer service.' },
+              { q: 'Do you have luxury furniture options?', a: 'Yes, we carry premium furniture pieces including luxury bedroom sets, designer sofas, and elegant dining furniture.' },
+              { q: 'Is your furniture affordable?', a: 'Absolutely! We offer furniture for every budget while maintaining high quality standards.' },
+              { q: 'Do you sell sofa sets?', a: 'Yes, we have a wide variety of sofa sets in different styles, fabrics, and sizes to suit your living room.' },
+              { q: 'What bedroom furniture do you have?', a: 'We carry beds, wardrobes, dressing tables, side tables, and complete bedroom sets including bridal furniture.' },
+              { q: 'Can I order custom furniture?', a: 'Yes, we can customize certain furniture items according to your requirements. Contact us for details.' },
+              { q: 'What materials do you use?', a: 'We work with quality wood, engineered wood, and premium fabrics depending on the product and your preference.' },
+              { q: 'How long does delivery take?', a: 'Delivery to Gujrat and nearby areas takes 2-5 days. Delivery to other cities across Pakistan takes 5-10 days. Custom orders may take 2-3 weeks.' },
+              { q: 'Do you deliver nationwide?', a: 'Yes, we deliver all over Pakistan to all major cities including Lahore, Islamabad, Karachi, Faisalabad, Multan, and more.' },
+              { q: 'Do you offer assembly services?', a: 'Yes, our team will deliver and assemble the furniture at your location.' },
+              { q: 'What is your return policy?', a: 'We accept returns within 7 days for manufacturing defects. Custom orders cannot be returned.' },
+              { q: 'Can I visit your showroom?', a: 'Yes! Visit us at Naseera Road, Gulyana, Kharian to see our complete furniture collection.' },
+              { q: 'How do I maintain wooden furniture?', a: 'Clean with a soft dry cloth regularly. Avoid direct sunlight and moisture. Use wood polish occasionally.' },
             ].map((faq, i) => (
               <div key={i} className="contact-faq-item">
                 <strong>{faq.q}</strong>

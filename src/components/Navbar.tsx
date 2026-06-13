@@ -49,10 +49,10 @@ export default function Navbar() {
         <div className="navbar__inner container">
           {/* Logo */}
           <Link to="/" className="navbar__logo">
-            <span className="navbar__logo-icon">🪑</span>
+            <img src={`${import.meta.env.BASE_URL}logoo.png`} alt="Gujrat Furniture Gulyana" className="navbar__logo-img" />
             <div>
-              <span className="navbar__logo-name">Oak & Aura</span>
-              <span className="navbar__logo-tagline">Furnishings</span>
+              <span className="navbar__logo-name">Gujrat Furniture</span>
+              <span className="navbar__logo-tagline">Gulyana</span>
             </div>
           </Link>
 
@@ -77,7 +77,7 @@ export default function Navbar() {
               )}
             </li>
             <li><Link to="/collections" className={location.pathname === '/collections' ? 'active' : ''}>Collections</Link></li>
-            <li><Link to="/lookbook" className={location.pathname === '/lookbook' ? 'active' : ''}>Lookbook</Link></li>
+            <li><Link to="/lookbook" className={location.pathname === '/lookbook' ? 'active' : ''}>Gallery</Link></li>
             <li><Link to="/about" className={location.pathname === '/about' ? 'active' : ''}>About</Link></li>
           </ul>
 
@@ -150,7 +150,7 @@ export default function Navbar() {
               </Link>
             ))}
             <Link to="/collections">Collections</Link>
-            <Link to="/lookbook">Lookbook</Link>
+            <Link to="/lookbook">Gallery</Link>
             <Link to="/about">About</Link>
             <Link to="/contact">Contact</Link>
           </div>

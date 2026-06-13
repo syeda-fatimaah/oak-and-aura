@@ -21,20 +21,19 @@ export default function Footer() {
         {/* Brand */}
         <div className="footer__brand">
           <div className="footer__logo">
-            <span>🪑</span>
+            <span>🛋️</span>
             <div>
-              <span className="footer__logo-name">Oak & Aura</span>
-              <span className="footer__logo-tagline">Furnishings</span>
+              <span className="footer__logo-name">Gujrat Furniture</span>
+              <span className="footer__logo-tagline">Gulyana</span>
             </div>
           </div>
           <p className="footer__brand-desc">
-            Transforming everyday living spaces into aesthetic experiences through thoughtfully designed furniture.
+            Your trusted destination for quality furniture in Gulyana. We bring comfort and style to your home with our wide range of premium furniture.
           </p>
           <div className="footer__socials">
+            <a href="https://www.facebook.com/people/Gujrati-Furniture-Gulyana/100093797471240/" target="_blank" rel="noopener noreferrer" aria-label="Facebook">📘</a>
+            <a href="https://wa.me/923480444147" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp">💬</a>
             <a href="#" aria-label="Instagram">📸</a>
-            <a href="#" aria-label="Twitter">𝕏</a>
-            <a href="#" aria-label="Facebook">f</a>
-            <a href="#" aria-label="Pinterest">📌</a>
           </div>
         </div>
 
@@ -44,10 +43,8 @@ export default function Footer() {
           <ul>
             <li><Link to="/shop?category=sofas">Sofas & Sectionals</Link></li>
             <li><Link to="/shop?category=beds">Beds & Bedroom</Link></li>
-            <li><Link to="/shop?category=dining">Dining Tables</Link></li>
-            <li><Link to="/shop?category=office">Office Furniture</Link></li>
-            <li><Link to="/shop?category=storage">Storage</Link></li>
-            <li><Link to="/shop?category=decor">Decor & Lighting</Link></li>
+            <li><Link to="/shop?category=storage">Dressing Tables</Link></li>
+            <li><Link to="/shop">All Products</Link></li>
           </ul>
         </div>
 
@@ -56,7 +53,7 @@ export default function Footer() {
           <h4>Company</h4>
           <ul>
             <li><Link to="/about">About Us</Link></li>
-            <li><Link to="/lookbook">Lookbook</Link></li>
+            <li><Link to="/lookbook">Gallery</Link></li>
             <li><Link to="/collections">Collections</Link></li>
             <li><Link to="/blog">Blog</Link></li>
             <li><Link to="/contact">Contact</Link></li>
@@ -78,8 +75,8 @@ export default function Footer() {
 
         {/* Newsletter */}
         <div className="footer__newsletter">
-          <h4>Stay Inspired</h4>
-          <p>Get 10% off your first order and exclusive design inspiration delivered to your inbox.</p>
+          <h4>Stay Connected</h4>
+          <p>Subscribe to get updates on new arrivals and special offers.</p>
           {subscribed ? (
             <div className="footer__subscribed">
               <span>✓</span> Thank you for subscribing!
@@ -100,15 +97,15 @@ export default function Footer() {
             </form>
           )}
           <div className="footer__contact-info">
-            <a href="mailto:hello@oakandaura.pk"><Mail size={14} /> hello@oakandaura.pk</a>
-            <a href="tel:+922134567890"><Phone size={14} /> +92 21 3456 7890</a>
-            <span><MapPin size={14} /> Plot 45, Clifton Block 5, Karachi</span>
+            <a href="tel:+923480444147"><Phone size={14} /> 0348 0444147</a>
+            <span><MapPin size={14} /> Naseera Road, Gulyana, Kharian</span>
+            <span style={{ marginTop: '8px', fontSize: '0.9em', opacity: 0.9 }}>Abdul Rahman - Proprietor</span>
           </div>
         </div>
       </div>
 
       <div className="footer__bottom container">
-        <p>© 2026 Oak & Aura Furnishings. All rights reserved.</p>
+        <p>© 2026 Gujrat Furniture Gulyana. All rights reserved.</p>
         <div className="footer__bottom-links">
           <Link to="/contact">Privacy Policy</Link>
           <Link to="/contact">Terms of Service</Link>
